@@ -26,10 +26,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LeetCode专题/贪心法" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/LeetCode专题/贪心法" />
+      <recent name="$PROJECT_DIR$/LeetCode专题/动态规划" />
       <recent name="$PROJECT_DIR$/LeetCode专题/数组" />
     </key>
   </component>
@@ -169,7 +171,10 @@
       <workItem from="1605243630247" duration="8482000" />
       <workItem from="1605310826886" duration="9893000" />
       <workItem from="1605527774587" duration="1666000" />
-      <workItem from="1605672858283" duration="2883000" />
+      <workItem from="1605672858283" duration="3657000" />
+      <workItem from="1605916292513" duration="720000" />
+      <workItem from="1606007533255" duration="17000" />
+      <workItem from="1606093848397" duration="2766000" />
     </task>
     <servers />
   </component>
