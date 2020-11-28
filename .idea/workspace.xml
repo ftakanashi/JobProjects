@@ -26,16 +26,44 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/LeetCode专题/贪心法" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LeetCode专题/排序" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/LeetCode专题/贪心法" />
-      <recent name="$PROJECT_DIR$/LeetCode专题/动态规划" />
+      <recent name="$PROJECT_DIR$/LeetCode专题/排序" />
       <recent name="$PROJECT_DIR$/LeetCode专题/数组" />
+      <recent name="$PROJECT_DIR$/LeetCode专题/位运算" />
+      <recent name="$PROJECT_DIR$/LeetCode专题/树" />
+      <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/LeetCode" />
+      <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.HeapSort">
+  <component name="RunManager" selected="Python.tmp (1)">
+    <configuration name="BucketSort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JobProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PlayGround/排序算法" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlayGround/排序算法/BucketSort.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="HeapSort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RadixSort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="tmp (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -88,12 +116,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PlayGround/排序算法" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlayGround/排序算法/RadixSort.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对/tmp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -102,7 +130,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ShellSort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="tmp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -110,34 +138,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PlayGround/排序算法" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LeetCode/222.完全二叉树的节点个数" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlayGround/排序算法/ShellSort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="heap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="JobProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PlayGround/堆" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlayGround/堆/heap.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LeetCode/222.完全二叉树的节点个数/tmp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.HeapSort" />
-        <item itemvalue="Python.heap" />
-        <item itemvalue="Python.RadixSort" />
-        <item itemvalue="Python.ShellSort" />
+        <item itemvalue="Python.tmp (1)" />
         <item itemvalue="Python.MergeSort" />
+        <item itemvalue="Python.BucketSort" />
+        <item itemvalue="Python.tmp" />
+        <item itemvalue="Python.HeapSort" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +180,11 @@
       <workItem from="1605672858283" duration="3657000" />
       <workItem from="1605916292513" duration="720000" />
       <workItem from="1606007533255" duration="17000" />
-      <workItem from="1606093848397" duration="2766000" />
+      <workItem from="1606093848397" duration="3128000" />
+      <workItem from="1606178591959" duration="3840000" />
+      <workItem from="1606220066945" duration="516000" />
+      <workItem from="1606355835876" duration="6891000" />
+      <workItem from="1606385874777" duration="7474000" />
     </task>
     <servers />
   </component>
@@ -186,49 +196,76 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="552" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1605413044226" />
-    <state width="1398" height="238" key="GridCell.Tab.0.bottom" timestamp="1605310066953">
+    <state width="1398" height="294" key="GridCell.Tab.0.bottom" timestamp="1606529689654">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605310066952" />
-    <state width="1398" height="238" key="GridCell.Tab.0.center" timestamp="1605310066952">
+    <state width="1398" height="294" key="GridCell.Tab.0.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689654" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606373906025" />
+    <state width="1398" height="294" key="GridCell.Tab.0.center" timestamp="1606529689651">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605310066952" />
-    <state width="1398" height="238" key="GridCell.Tab.0.left" timestamp="1605310066952">
+    <state width="1398" height="294" key="GridCell.Tab.0.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689651" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1606373906019" />
+    <state width="1398" height="294" key="GridCell.Tab.0.left" timestamp="1606529689649">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605310066951" />
-    <state width="1398" height="238" key="GridCell.Tab.0.right" timestamp="1605310066952">
+    <state width="1398" height="294" key="GridCell.Tab.0.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689649" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1606373906018" />
+    <state width="1398" height="294" key="GridCell.Tab.0.right" timestamp="1606529689653">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605310066952" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1605070446980">
+    <state width="1398" height="294" key="GridCell.Tab.0.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689653" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1606373906021" />
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1606529689659">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605070446980" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1605070446979">
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689659" />
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606200894435" />
+    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1606529689657">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1605070446979" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1605070446979">
+    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689657" />
+    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606200894433" />
+    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1606529689655">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1605070446979" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1605070446979">
+    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689655" />
+    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606200894432" />
+    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1606529689658">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1605070446979" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605673502581">
+    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606529689658" />
+    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606200894434" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1606445773238">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605673502581" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606445773238" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对/tmp.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对/tmp.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JobProjects$QuickSort.coverage" NAME="QuickSort Coverage Results" MODIFIED="1604914751707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
     <SUITE FILE_PATH="coverage/JobProjects$heap.coverage" NAME="heap Coverage Results" MODIFIED="1605271139600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/堆" />
-    <SUITE FILE_PATH="coverage/JobProjects$MergeSort.coverage" NAME="MergeSort Coverage Results" MODIFIED="1604975655910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
+    <SUITE FILE_PATH="coverage/JobProjects$MergeSort.coverage" NAME="MergeSort Coverage Results" MODIFIED="1606527450429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
     <SUITE FILE_PATH="coverage/JobProjects$RadixSort.coverage" NAME="RadixSort Coverage Results" MODIFIED="1605160384914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
-    <SUITE FILE_PATH="coverage/JobProjects$HeapSort.coverage" NAME="HeapSort Coverage Results" MODIFIED="1605271789837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
+    <SUITE FILE_PATH="coverage/JobProjects$BucketSort.coverage" NAME="BucketSort Coverage Results" MODIFIED="1606357036133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
+    <SUITE FILE_PATH="coverage/JobProjects$HeapSort.coverage" NAME="HeapSort Coverage Results" MODIFIED="1606181246381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
+    <SUITE FILE_PATH="coverage/JobProjects$tmp__1_.coverage" NAME="tmp (1) Coverage Results" MODIFIED="1606529530695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对" />
     <SUITE FILE_PATH="coverage/JobProjects$ShellSort.coverage" NAME="ShellSort Coverage Results" MODIFIED="1604976356748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
+    <SUITE FILE_PATH="coverage/JobProjects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1606181363491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode/222.完全二叉树的节点个数" />
   </component>
 </project>
