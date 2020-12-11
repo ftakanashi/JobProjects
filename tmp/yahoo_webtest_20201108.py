@@ -21,6 +21,7 @@ def find_max(stack, K):
         if book.v > max_v:
             max_i = i
             max_book = book
+            max_v = book.v
     return max_i, max_book
 
 def main():

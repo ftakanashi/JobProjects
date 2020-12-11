@@ -53,12 +53,26 @@ class Heap:
 
 if __name__ == '__main__':
     import random
+
+    # 通过自己实现的Heap类玩耍
     data = list(range(12))
     random.shuffle(data)
     heap = Heap(data)
     heap.peek()
     heap.enqueue(6)
     heap.peek()
-
     print(heap.dequeue())
     heap.peek()
+
+    # 通过内建的堆类heapq玩耍
+    # 注意，给出的数据本体queue，始终是一个列表
+    # heapq的各个方法可以把queue中的数据始终维护成一个有堆序的堆，但是并没有改变其数据结构
+    import heapq
+    queue = list(range(12))
+    random.shuffle(queue)
+    heapq.heapify(queue)    # 建堆操作
+    print(queue[0])    # peek
+    heapq.heappush(queue, 6)    # enqueue
+    print(queue[0])    # peek
+    print(heapq.heappop(queue))    # dequeue
+    print(queue[0])
