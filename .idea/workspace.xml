@@ -26,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/LeetCode专题/排序" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -41,29 +41,7 @@
       <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.heap (1)">
-    <configuration name="MergeSort" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="JobProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PlayGround/排序算法" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlayGround/排序算法/MergeSort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.tmp">
     <configuration name="heap (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tmp (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="tmp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,12 +116,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tmp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对/tmp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tmp/tmp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="unionfind" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JobProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tmp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tmp/unionfind.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.heap (1)" />
+        <item itemvalue="Python.tmp" />
         <item itemvalue="Python.merge_sort" />
+        <item itemvalue="Python.unionfind" />
+        <item itemvalue="Python.heap (1)" />
         <item itemvalue="Python.heap" />
-        <item itemvalue="Python.tmp (1)" />
-        <item itemvalue="Python.MergeSort" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +194,20 @@
       <workItem from="1607067015444" duration="6829000" />
       <workItem from="1607422235799" duration="2256000" />
       <workItem from="1607481202912" duration="1452000" />
-      <workItem from="1607573445697" duration="7984000" />
+      <workItem from="1607573445697" duration="9773000" />
+      <workItem from="1607840171120" duration="6538000" />
+      <workItem from="1608338504896" duration="6287000" />
+      <workItem from="1608460341940" duration="28000" />
+      <workItem from="1608476892146" duration="568000" />
+      <workItem from="1608519260490" duration="3372000" />
+      <workItem from="1608653221021" duration="1263000" />
+      <workItem from="1608697428948" duration="30000" />
+      <workItem from="1608701337726" duration="598000" />
+      <workItem from="1608703920791" duration="159000" />
+      <workItem from="1608959487127" duration="1883000" />
+      <workItem from="1608965759392" duration="43000" />
+      <workItem from="1609039288169" duration="1583000" />
+      <workItem from="1609119901169" duration="1304000" />
     </task>
     <servers />
   </component>
@@ -206,55 +219,63 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="552" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1605413044226" />
-    <state width="1398" height="238" key="GridCell.Tab.0.bottom" timestamp="1607669887631">
+    <state x="483" y="161" key="#xdebugger.evaluate" timestamp="1607911862735">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720628" />
-    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607669887631" />
+    <state x="483" y="161" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1607911862735" />
+    <state width="967" height="466" key="DebuggerActiveHint" timestamp="1607911959925">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="967" height="466" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1607911959925" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom" timestamp="1608564077152">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1608564077152" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1608552923852" />
     <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689304" />
-    <state width="1398" height="238" key="GridCell.Tab.0.center" timestamp="1607669887629">
+    <state width="1398" height="238" key="GridCell.Tab.0.center" timestamp="1608564077151">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720627" />
-    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1607669887629" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1608564077151" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1608552923851" />
     <state width="1398" height="238" key="GridCell.Tab.0.center/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689299" />
-    <state width="1398" height="238" key="GridCell.Tab.0.left" timestamp="1607669887628">
+    <state width="1398" height="238" key="GridCell.Tab.0.left" timestamp="1608564077150">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720626" />
-    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1607669887628" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1608564077150" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1608552923850" />
     <state width="1398" height="238" key="GridCell.Tab.0.left/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689297" />
-    <state width="1398" height="238" key="GridCell.Tab.0.right" timestamp="1607669887630">
+    <state width="1398" height="238" key="GridCell.Tab.0.right" timestamp="1608564077152">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720627" />
-    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1607669887630" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1608564077152" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1608552923851" />
     <state width="1398" height="238" key="GridCell.Tab.0.right/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689302" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1606543720630">
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1607947183716">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720630" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1606200894435" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1606543720629">
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607947183716" />
+    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1607947183715">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720629" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1606200894433" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1606543720628">
+    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1607947183715" />
+    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1607947183714">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720628" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1606200894432" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1606543720629">
+    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1607947183714" />
+    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1607947183715">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1606543720629" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1606200894434" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1607657793617">
+    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1607947183715" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1608959898891">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1607657793617" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1607149123163" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1608558359912" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1608959898891" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -276,13 +297,14 @@
     <SUITE FILE_PATH="coverage/JobProjects$QuickSort.coverage" NAME="QuickSort Coverage Results" MODIFIED="1604914751707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
     <SUITE FILE_PATH="coverage/JobProjects$heap.coverage" NAME="heap Coverage Results" MODIFIED="1606698026407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/堆" />
     <SUITE FILE_PATH="coverage/JobProjects$MergeSort.coverage" NAME="MergeSort Coverage Results" MODIFIED="1606527450429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
-    <SUITE FILE_PATH="coverage/JobProjects$merge_sort.coverage" NAME="merge_sort Coverage Results" MODIFIED="1607600330767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
+    <SUITE FILE_PATH="coverage/JobProjects$merge_sort.coverage" NAME="merge_sort Coverage Results" MODIFIED="1608520873647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
     <SUITE FILE_PATH="coverage/JobProjects$RadixSort.coverage" NAME="RadixSort Coverage Results" MODIFIED="1605160384914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
     <SUITE FILE_PATH="coverage/JobProjects$BucketSort.coverage" NAME="BucketSort Coverage Results" MODIFIED="1606357036133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
-    <SUITE FILE_PATH="coverage/JobProjects$heap__1_.coverage" NAME="heap (1) Coverage Results" MODIFIED="1607669887618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
+    <SUITE FILE_PATH="coverage/JobProjects$heap__1_.coverage" NAME="heap (1) Coverage Results" MODIFIED="1607911810137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
     <SUITE FILE_PATH="coverage/JobProjects$HeapSort.coverage" NAME="HeapSort Coverage Results" MODIFIED="1606181246381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
     <SUITE FILE_PATH="coverage/JobProjects$tmp__1_.coverage" NAME="tmp (1) Coverage Results" MODIFIED="1606529530695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对" />
     <SUITE FILE_PATH="coverage/JobProjects$ShellSort.coverage" NAME="ShellSort Coverage Results" MODIFIED="1604976356748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
-    <SUITE FILE_PATH="coverage/JobProjects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1606181363491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LeetCode/222.完全二叉树的节点个数" />
+    <SUITE FILE_PATH="coverage/JobProjects$unionfind.coverage" NAME="unionfind Coverage Results" MODIFIED="1608520490575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
+    <SUITE FILE_PATH="coverage/JobProjects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1608552923839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
   </component>
 </project>

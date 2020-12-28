@@ -23,3 +23,17 @@ class Solution1:
             curr = nxt
 
         return prev
+
+class Solution2:
+    def reverseList(self, head: ListNode) -> ListNode:
+        if head is None or head.next is None:
+            return head
+        if head.next.next is None:
+            res = head.next
+            res.next = head
+            head.next = None
+            return res
+        res = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return res

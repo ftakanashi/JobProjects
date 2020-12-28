@@ -18,4 +18,14 @@
 时间O(n)空间O(1)
 
 ### 解法2 递归
-没时间了，就贴个URL：https://leetcode-cn.com/problems/reverse-linked-list/solution/fan-zhuan-lian-biao-by-leetcode/
+刚开始考虑递归方法的时候，尽想着下一层递归返回上来的应该是已经反转好的链表的最后一个节点。
+
+这样才能进行类似于`res.next = head`这样的操作。但是这样的方案最后无法找到反转后链表的开头。
+
+实际上，不从后部已经完成反转的最后一个节点出发，只从head本身出发就可以做当前层的反转能操作：
+```python
+head.next.next = head
+head.next = None
+```
+
+因此，递归函数可以一直返回反转后链表的头给上一层，并且每一层里进行反转操作即可。
