@@ -1,56 +1,55 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-class myheap:
+class Heap:
+    def __init__(self, lst):
+        self._elems = lst
+        self.heapify()
 
-    @classmethod
-    def shiftUp(cls, lst, start):
-        e = lst[start]
+    def heapify(self):
+        end = len(self._elems) - 1
+        for i in range((end - 1) // 2, -1, -1):
+            self.shiftDown(i)
+
+    def shiftDown(self, start):
+        n = len(self._elems)
         i = start
-        j = (i - 1) // 2
-        while j >= 0 and lst[j] < e:
-            lst[i] = lst[j]
-            i, j = j, (j - 1) // 2
-        lst[i] = e
-
-    @classmethod
-    def heapAppend(cls, lst, e):
-        lst.append(e)
-        cls.shiftUp(lst, len(lst) - 1)
-
-    @classmethod
-    def shiftDown(cls, lst, start):
-        e = lst[start]
-        i, j = start, start * 2 + 1
-        if j + 1 < len(lst) and lst[j+1] > lst[j]:
+        j = i * 2 + 1
+        if j + 1 < n and self._elems[j + 1] > self._elems[j]:
             j = j + 1
-        while j < len(lst) and lst[j] > e:
-            lst[i] = lst[j]
-            i, j = j, j * 2 + 1
-            if j + 1 < len(lst) and lst[j+1] > lst[j]:
+
+        e = self._elems[start]
+        while j < n and self._elems[j] > e:
+            self._elems[i] = self._elems[j]
+            i = j
+            j = i * 2 + 1
+            if j + 1 < n and self._elems[j+1] > self._elems[j]:
                 j = j + 1
-        lst[i] = e
+        self._elems[i] = e
 
-    @classmethod
-    def heapify(cls, lst):
-        end = len(lst) - 1
-        for i in range(end // 2, -1, -1):
-            cls.shiftDown(lst, i)
+    def shiftUp(self, start):
+        i = start
+        j = (start - 1) // 2
+        e = self._elems[start]
+        while i > 0 and self._elems[j] < e:
+            self._elems[i] = self._elems[j]
+            i = j
+            j = (i - 1) // 2
+        self._elems[i] = e
 
-    @classmethod
-    def heappop(cls, lst):
-        e = lst[0]
-        del lst[0]
-        return e
+    def pop(self):
+        res = self._elems[0]
+        self._elems = self._elems[1:]
+        self.shiftDown(0)
+        return res
+
+    def append(self, e):
+        self._elems.append(e)
+        self.shiftUp(len(self._elems) - 1)
+
+    def __len__(self):
+        return len(self._elems)
 
 if __name__ == '__main__':
-    l = [0,1,2,3,4,5,6,7,8,9]
-    myheap.heapify(l)
-    print(l)
-    myheap.heapAppend(l, 7)
-    print(l)
-
-    for _ in range(6):
-        e = myheap.heappop(l)
-    print(e)
-    print(l)
+    heap = Heap([2,7,4,1,8,1])
+    print(heap._elems)
