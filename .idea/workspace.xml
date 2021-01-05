@@ -27,6 +27,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -212,7 +213,16 @@
       <workItem from="1609292834311" duration="1352000" />
       <workItem from="1609312164852" duration="17000" />
       <workItem from="1609376614108" duration="2458000" />
-      <workItem from="1609552448875" duration="1624000" />
+      <workItem from="1609552448875" duration="3097000" />
+      <workItem from="1609596221826" duration="13000" />
+      <workItem from="1609599024347" duration="1949000" />
+      <workItem from="1609638089067" duration="2390000" />
+      <workItem from="1609657104087" duration="1739000" />
+      <workItem from="1609688061835" duration="2792000" />
+      <workItem from="1609776562171" duration="24000" />
+      <workItem from="1609810335857" duration="1238000" />
+      <workItem from="1609843496454" duration="19000" />
+      <workItem from="1609857615287" duration="927000" />
     </task>
     <servers />
   </component>
@@ -276,11 +286,11 @@
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202140" />
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1607947183715" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1609251414363">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1609599055107">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1608558359912" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1609251414363" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1609599055107" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
