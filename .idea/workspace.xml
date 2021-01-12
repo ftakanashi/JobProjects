@@ -42,7 +42,7 @@
       <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.heap (1)">
+  <component name="RunManager" selected="Python.tmp">
     <configuration name="heap (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,9 +155,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tmp" />
         <item itemvalue="Python.heap (1)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.tmp" />
         <item itemvalue="Python.merge_sort" />
         <item itemvalue="Python.unionfind" />
       </list>
@@ -222,7 +222,15 @@
       <workItem from="1609776562171" duration="24000" />
       <workItem from="1609810335857" duration="1238000" />
       <workItem from="1609843496454" duration="19000" />
-      <workItem from="1609857615287" duration="927000" />
+      <workItem from="1609857615287" duration="3117000" />
+      <workItem from="1609944514355" duration="4037000" />
+      <workItem from="1610069024348" duration="1131000" />
+      <workItem from="1610070635717" duration="25000" />
+      <workItem from="1610092257871" duration="1161000" />
+      <workItem from="1610095010486" duration="2000" />
+      <workItem from="1610170701871" duration="2030000" />
+      <workItem from="1610320943632" duration="3338000" />
+      <workItem from="1610410037189" duration="3309000" />
     </task>
     <servers />
   </component>
@@ -242,55 +250,55 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="967" height="466" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1607911959925" />
-    <state width="1398" height="294" key="GridCell.Tab.0.bottom" timestamp="1609295202138">
+    <state width="1398" height="294" key="GridCell.Tab.0.bottom" timestamp="1610095005071">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202138" />
-    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1609251614448" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1610024731809" />
+    <state width="1398" height="294" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1610095005071" />
     <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689304" />
-    <state width="1398" height="294" key="GridCell.Tab.0.center" timestamp="1609295202137">
+    <state width="1398" height="294" key="GridCell.Tab.0.center" timestamp="1610095005068">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202137" />
-    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1609251614447" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1610024731808" />
+    <state width="1398" height="294" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1610095005068" />
     <state width="1398" height="238" key="GridCell.Tab.0.center/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689299" />
-    <state width="1398" height="294" key="GridCell.Tab.0.left" timestamp="1609295202137">
+    <state width="1398" height="294" key="GridCell.Tab.0.left" timestamp="1610095005067">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202137" />
-    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1609251614445" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1610024731807" />
+    <state width="1398" height="294" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1610095005067" />
     <state width="1398" height="238" key="GridCell.Tab.0.left/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689297" />
-    <state width="1398" height="294" key="GridCell.Tab.0.right" timestamp="1609295202138">
+    <state width="1398" height="294" key="GridCell.Tab.0.right" timestamp="1610095005069">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="294" key="GridCell.Tab.0.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202138" />
-    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1609251614447" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1610024731809" />
+    <state width="1398" height="294" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1610095005069" />
     <state width="1398" height="238" key="GridCell.Tab.0.right/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1606709689302" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1609295202140">
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1610095005074">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202140" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1607947183716" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1609295202139">
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1610095005074" />
+    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1610095005073">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202139" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1607947183715" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1609295202139">
+    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1610095005073" />
+    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1610095005072">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202139" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1607947183714" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1609295202140">
+    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1610095005072" />
+    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1610095005073">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202140" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1607947183715" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1609599055107">
+    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1610095005073" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1610462255315">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1608558359912" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1609599055107" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609944616648" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1610462255315" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -304,6 +312,11 @@
           <url>file://$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对/tmp.py</url>
           <line>44</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tmp/tmp.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -321,6 +334,6 @@
     <SUITE FILE_PATH="coverage/JobProjects$tmp__1_.coverage" NAME="tmp (1) Coverage Results" MODIFIED="1606529530695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/JZOffer/JZ51.数组中的逆序对" />
     <SUITE FILE_PATH="coverage/JobProjects$ShellSort.coverage" NAME="ShellSort Coverage Results" MODIFIED="1604976356748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
     <SUITE FILE_PATH="coverage/JobProjects$unionfind.coverage" NAME="unionfind Coverage Results" MODIFIED="1608520490575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
-    <SUITE FILE_PATH="coverage/JobProjects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1609228429346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
+    <SUITE FILE_PATH="coverage/JobProjects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1610092299591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
   </component>
 </project>
