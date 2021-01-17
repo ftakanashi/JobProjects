@@ -30,15 +30,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/LeetCode" />
-      <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/LeetCode专题/排序" />
       <recent name="$PROJECT_DIR$/LeetCode专题/数组" />
       <recent name="$PROJECT_DIR$/LeetCode专题/位运算" />
       <recent name="$PROJECT_DIR$/LeetCode专题/树" />
+      <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PlayGround/并查集" />
+      <recent name="$PROJECT_DIR$/LeetCode" />
       <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
     </key>
   </component>
@@ -230,7 +231,11 @@
       <workItem from="1610095010486" duration="2000" />
       <workItem from="1610170701871" duration="2030000" />
       <workItem from="1610320943632" duration="3338000" />
-      <workItem from="1610410037189" duration="3309000" />
+      <workItem from="1610410037189" duration="9499000" />
+      <workItem from="1610586279435" duration="1980000" />
+      <workItem from="1610671772110" duration="8449000" />
+      <workItem from="1610758521066" duration="2937000" />
+      <workItem from="1610813024375" duration="3509000" />
     </task>
     <servers />
   </component>
@@ -294,11 +299,11 @@
     </state>
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609295202140" />
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1610095005073" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1610462255315">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1610713227455">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1609944616648" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1610462255315" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1610526451257" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1610713227455" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
