@@ -31,3 +31,22 @@ class Solution:
             ans = 2**31 - 1
 
         return -ans if minus else ans
+
+class Solution2:
+    def divide(self, dividend: int, divisor: int) -> int:
+        minus = False
+        if (dividend > 0 and divisor < 0) or (dividend < 0 and divisor > 0):
+            minus = True
+        dividend, divisor = abs(dividend), abs(divisor)
+
+        res = 0
+        while dividend >= divisor:
+            base, times = divisor, 1
+            while dividend >= base:
+                base += base
+                times += times
+            res += (times // 2)
+            dividend -= (base // 2)
+
+        res = -min(res, 2**31) if minus else min(res, 2**31-1)
+        return res

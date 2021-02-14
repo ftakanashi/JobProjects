@@ -1,19 +1,35 @@
 #!/usr/bin/env python
 from typing import List
 
-class Solution:
+class Solution1:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        n = len(nums)
+        def dfs(ans, seen):
+            if len(ans) == n:
+                res.append(ans)
+                return
+            for num in nums:
+                if num not in seen:
+                    seen.add(num)
+                    dfs(ans+[num,], seen)
+                    seen.remove(num)
+        dfs([], set([]))
+        return res
+
+class Solution2:
     def permute(self, nums: List[int]) -> List[List[int]]:
         n = len(nums)
-        def rec(i: int) -> List[List[int]]:
-            if i == n - 1:
-                return [[nums[n-1], ]]
+        res = []
 
-            res = []
-            for subset in rec(i + 1):
-                for pos in range(len(subset) + 1):
-                    subset.insert(pos, nums[i])    # 插入
-                    res.append(subset.copy())    # 一定要有copy
-                    del subset[pos]    # 为了后面的操作还原
-            return res
+        def dfs(pos: int):
+            if pos == n - 1:
+                res.append(nums.copy())
+                return
+            for i in range(pos, n):
+                nums[pos], nums[i] = nums[i], nums[pos]
+                dfs(pos + 1)
+                nums[pos], nums[i] = nums[i], nums[pos]
 
-        return rec(0)
+        dfs(0)
+        return res

@@ -2,6 +2,9 @@
 # -*- coding:utf-8 -*-
 
 class Heap:
+    '''
+    类实现
+    '''
 
     def __init__(self, elems):
         self._elems = list(elems)
@@ -21,7 +24,7 @@ class Heap:
     def shift_up(self, e, last):
         elems, i, j = self._elems, last, (last - 1) // 2
         while j >= 0:
-            if elems[j] <= e:
+            if elems[j] <= e:    # 大顶堆 elems[j] >= e
                 break
             elems[i] = elems[j]
             i, j = j, (j - 1) // 2
@@ -30,9 +33,9 @@ class Heap:
     def shift_down(self, e, start, end):
         elems, i, j = self._elems, start, start * 2 + 1
         while j < end:
-            if j + 1 < end and elems[j + 1] < elems[j]:
+            if j + 1 < end and elems[j + 1] < elems[j]:    # 如果是大顶堆这里换elems[j+1] > elems[j]
                 j += 1
-            if e < elems[j]:
+            if e < elems[j]:    # 大顶堆：e > elems[j]
                 break
             elems[i] = elems[j]
             i, j = j, j * 2 + 1

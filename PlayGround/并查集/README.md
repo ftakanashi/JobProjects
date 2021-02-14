@@ -48,7 +48,7 @@ D-E
 
 也是因为查找+合并的策略，这算法被称为，并查集。
 
-## 如何实现并查集
+# 实现
 
 初始化状态下，我们假设图中没有任何连接着的边，此时联通分量个数显然就和节点个数相当。
 此时这个数组是类似于`fa = [i for i in range(n)]`。即每个联通分量的根节点都是节点自己。`
@@ -86,27 +86,7 @@ class UnionFind:
             self.fa[root_y] = root_x
 ```
 
-~~注意其中union方法，虽然看起来x和y是等价的两个输入变量，但是只有当x < y的时候，变根操作才能是`self.fa[root_y] = root_x`，不能反过来。~~
-~~也就是说，总是需要将排在fa后列的根变更为前列的根，总体上，最终fa中的值都是偏小的。~~
-
-~~因为通常union的x,y都是从左到右遍历，可以做到x < y，因此没什么毛病。但如果不是就需要注意了。~~
-
-~~一个一劳永逸的办法是，手动确保总是大根被变更为小根，即将union改写如下：~~
-```python
-'''
-！！！作废！！！
-'''
-def union(self, x, y):
-    root_x = self.find(x)
-    root_y = self.find(y)
-    if root_x < root_y:
-        self.fa[root_y] = root_x
-    elif root_x > root_y:
-        self.fa[root_x] = root_y
-
-```
-
-### 路径压缩优化
+## 路径压缩优化
 上述算法有一个问题，当图本身退化成一个链表的时候，`find`方法每次都要O(n)时间。
 
 事实上可以想见，使用`find`回溯寻找根节点的过程，存在大量重复的计算。
@@ -139,8 +119,9 @@ def find(self, x):
 如此，在每一次union过后，虽然被union的分量中各个节点的根节点信息还不会被实时更新。
 但是只要这些节点后续被`find`，那么就可以保证最新信息被更新上去。
 
-### 递归式find
+## 递归式find优化
 以上路径优化的过程，其实可以轻松用递归的方式实现。
+虽然本质上迭代和递归是一样的，但是递归式的表达更容易记忆。
 ```python
 def find(self, x):
     if self.fa[x] != x:
@@ -148,9 +129,135 @@ def find(self, x):
     return self.fa[x]
 ```
 
-## 分析和其他
+所以并查集写成这样：
+```python
+class UnionFind:
+    def __init__(self, n):
+        self.fa = [i for i in range(n)]
+    
+    def find(self, x):
+        if self.fa[x] != x:
+            self.fa[x] = self.find(self.fa[x])
+        return self.fa[x]
+
+    def union(self, x, y):
+        root_x = self.find(x)
+        root_y = self.find(y)
+        if root_x != root_y:
+            self.fa[root_y] = root_x
+```
+
+## 基于哈希表（字典）的实现
+以上实现的并查集，其核心还是一个顺序表。
+因此功能会受到下标（必须是数字形式）的限制，以及动态扩展比较麻烦。
+解决上述两个问题，可以采用基于字典的实现。
+
+和基于数组的实现不同的地方在于，在find方法中要对x还没有出现在字典中的情况进行处理。
+
+```python
+class UnionFind:
+    def __init__(self):
+        self.fa = {}
+
+    def find(self, x):
+        if x not in self.fa:
+            self.fa[x] = x
+        elif self.fa[x] != x:
+            self.fa[x] = self.find(self.fa[x])
+        return self.fa[x]
+
+    def union(self, x, y):
+        root_x = self.find(x)
+        root_y = self.find(y)
+        if root_x != root_y:
+            self.fa[root_y] = root_x
+```
+
+## 加入rank优化
+以上所有实现中的union方法，其实有个比较令人恶心的点。
+无脑地另y的根节点和x一致即`self.fa[root_y] = root_x`。
+那为什么不能反过来呢。
+
+换句话说，如果x所在的连通分量很小很浅，而y所在的分量很大很深，此时如果无脑将y的根节点置成和x一致，那y所在分量所有节点都要改。
+显然不太合理。
+
+如果能在更换根节点前，得知两个分量各自的深度就好了，此时就可以考虑加入rank数组维护这部分信息。
+（这里深度的定义是从根节点开始可以遍历到最远的同一个树中的节点，连接到那个节点所需要的边数）
+
+显然最开始rank初始化是0，表示单节点图。union的时候，选择深度较大的根节点作为基准，把深度小的树的根节点指向它。
+
+如果两树深度相同，原则上可以随便连，这里采用把y连到x，这样的话x的深度要+1。
+
+这种加入rank的优化叫Union by rank，实现如下：
+
+```python
+class UnionFind:
+    def __init__(self):
+        self.fa = {}
+        self.rank = {}
+
+    def find(self, x):
+        if x not in self.fa:
+            self.fa[x] = x
+            self.rank[x] = 0    # 初始化
+        elif self.fa[x] != x:
+            self.fa[x] = self.find(self.fa[x])
+        return self.fa[x]
+
+    def union(self, x, y):
+        root_x, root_y = self.find(x), self.find(y)
+        if root_x != root_y:
+            if self.rank[root_x] < self.rank[root_y]:    # 这里加上判断
+                self.fa[root_x] = root_y    # x的rank至少比y的rank-1小，因此即使合并过去self.rank[root_y]不会变
+            else:
+                self.fa[root_y] = root_x
+                # 别忘了相等时及时加深度
+                if self.rank[root_x] == self.rank[root_y]: self.rank[root_x] += 1
+```
+
+## 一种可以实时统计每个分量节点数目的变体
+用并查集解决的问题，大多都不会是建立完并查集就完事了。
+
+往往需要我们进一步地考察并查集的性质并得到结果。有时候为了方便，可以考虑修改并查集本体代码，埋入某些功能。
+这样最终要求的某些性质，在并查集建立过程中就动态维护了起来，最终只要取出来即可。
+
+比如我想知道某个连通分量最终有几个节点。此时可以考虑在并查集中加上size这个属性，实时维护各个分量的节点数目。
+```python
+class UnionFind:
+    def __init__(self):
+        self.fa = {}
+        self.rank = {}
+        self.size = {}
+
+    def find(self, x):
+        if x not in self.fa:
+            self.fa[x] = x
+            self.rank[x] = 0
+            self.size[x] = 1    # 初始化
+        elif self.fa[x] != x:
+            self.fa[x] = self.find(self.fa[x])
+        return self.fa[x]
+
+    def union(self, x, y):
+        root_x, root_y = self.find(x), self.find(y)
+        if root_x != root_y:
+            if self.rank[root_x] < self.rank[root_y]:
+                self.fa[root_x] = root_y
+                self.size[root_y] += self.size[root_x]    # 实时维护分量节点数量
+            else:
+                self.fa[root_y] = root_x
+                self.size[root_x] += self.size[root_y]    # 实时维护分量节点数量
+                if self.rank[root_x] == self.rank[root_y]: self.rank[root_x] += 1
+```
+
+和上述代码类似的，很多这种利用并查集求一些比较拐弯抹角的结果时，都可以这么稍微修改下并查集本体代码来达到目的。
+
+修改的时候注意考虑find和union的时候分别发生甚么变化，该如何实时维护即可。
+
+# 分析和其他
 理想情况下，当并查集构建完成并被`find`够一定次数后，可以认为所有的信息都被更新了。
 此时再根据下标查找连通分量时就只需要O(1)时间。
+在并查集还没把信息更新透每次union和find操作都是O(logn)的。
 
 空间方面，显然全程只用了O(n)的数组。
 
@@ -166,28 +273,3 @@ def find(self, x):
 >上述有问题的节点，虽然目前其指向的根节点还是老版本的，但是肯定不是其本身。
 >因此在统计分量个数之类的问题中，对于最终的fa，可以检查`fa[i] == i`的个数，这样即便有一些节点对应的根节点没有被更新，
 >也不会发生错误的统计。
-
-## 另一种实现的UnionFind
-
-这种实现中主要做了以下改动：
-- fa采用了字典（哈希表）的方式实现。虽然上述基于数组的实现原理上也是哈希，但是字典更加简单易懂
-- find方法采用了递归而非迭代的办法。
-- 简化了union代码更加方便记忆
-
-```python
-class UnionFind:
-    def __init__(self):
-        self.fa = {}
-
-    def find(self, x):
-        if x not in self.fa:
-            self.fa[x] = x
-        elif self.fa[x] != x:
-            self.fa[x] = self.find(self.fa[x])
-        return self.fa[x]
-
-    def union(self, x, y):
-        self.fa[self.find(x)] = self.find(y)
-``` 
-
-由于fa用哈希表实现，如果后续需要在并查集中加入新的节点以及边，就可以动态扩展，比较方便。

@@ -1,55 +1,64 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
+'''
+1. shiftDown和shiftUp都用while下标不越界+break制
+2. shiftDown的额外条件是j+1和j比较，与堆序一致
+2. break条件是j和e之间(位置别搞反)<=>比较, shiftUp与堆序一致, shiftDown与堆序相反！！
+'''
+
 class Heap:
     def __init__(self, lst):
-        self._elems = lst
-        self.heapify()
-
-    def heapify(self):
-        end = len(self._elems) - 1
-        for i in range((end - 1) // 2, -1, -1):
+        self.elems = lst
+        for i in range((len(self.elems) - 1) // 2, -1, -1):
             self.shiftDown(i)
 
     def shiftDown(self, start):
-        n = len(self._elems)
-        i = start
-        j = i * 2 + 1
-        if j + 1 < n and self._elems[j + 1] > self._elems[j]:
-            j = j + 1
-
-        e = self._elems[start]
-        while j < n and self._elems[j] > e:
-            self._elems[i] = self._elems[j]
-            i = j
-            j = i * 2 + 1
-            if j + 1 < n and self._elems[j+1] > self._elems[j]:
-                j = j + 1
-        self._elems[i] = e
+        e = self.elems[start]
+        i, j = start, start * 2 + 1
+        while j < len(self.elems):
+            if j + 1 < len(self.elems) and self.elems[j+1] < self.elems[j]:
+                j += 1
+            if self.elems[j] >= e: break
+            self.elems[i] = self.elems[j]
+            i, j = j, j * 2 + 1
+        self.elems[i] = e
 
     def shiftUp(self, start):
-        i = start
-        j = (start - 1) // 2
-        e = self._elems[start]
-        while i > 0 and self._elems[j] < e:
-            self._elems[i] = self._elems[j]
-            i = j
-            j = (i - 1) // 2
-        self._elems[i] = e
+        e = self.elems[start]
+        i, j = start, (start - 1) // 2
+        while j >= 0:
+            if self.elems[j] <= e: break
+            self.elems[i] = self.elems[j]
+            i, j = j, (j - 1) // 2
+        self.elems[i] = e
+
+    def push(self, val):
+        self.elems.append(val)
+        self.shiftUp(len(self.elems) - 1)
 
     def pop(self):
-        res = self._elems[0]
-        self._elems = self._elems[1:]
-        self.shiftDown(0)
-        return res
-
-    def append(self, e):
-        self._elems.append(e)
-        self.shiftUp(len(self._elems) - 1)
-
-    def __len__(self):
-        return len(self._elems)
+        if len(self.elems) == 0: return
+        val = self.elems[0]
+        if len(self.elems) > 1:
+            self.elems[0] = self.elems.pop()
+            self.shiftDown(0)
+        else:
+            self.elems.pop()
+        return val
 
 if __name__ == '__main__':
-    heap = Heap([2,7,4,1,8,1])
-    print(heap._elems)
+    l = list(range(10))
+    import random
+    random.shuffle(l)
+    print(l)
+    heap = Heap(l)
+    print(heap.elems)
+    heap.push(5)
+    print(heap.elems)
+    print(heap.pop())
+    print(heap.elems)
+    print(heap.pop())
+    print(heap.elems)
+    while len(heap.elems) > 0:
+        print(heap.pop(), end=',')

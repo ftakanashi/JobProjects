@@ -1,34 +1,30 @@
-#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-from typing import List
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
-def convert(s: str, numRows: int) -> str:
-    i = 0
-    res = ''
-    while i < len(s):
-        res += s[i]
-        i += (2*numRows - 2)
-
-    n = 1
-    while n < numRows - 1:
-        i = n
-        res += s[i]
-        while True:
-            i += (2*numRows - 2)
-            if i >= len(s): break
-            if i - n < len(s):
-                res += s[i - n]
-            if i + n < len(s):
-                res += s[i + n]
-        n += 1
-
-    i = numRows - 1
-    while i < len(s):
-        res += s[i]
-        i += (2*numRows - 2)
-
+def preorder(root: TreeNode):
+    if root is None: return []
+    stack = [root, ]
+    res = []
+    while stack:
+        node = stack.pop()
+        res.append(node.val)
+        if node.right: stack.append(node.right)
+        if node.left: stack.append(node.left)
     return res
 
-if __name__ == '__main__':
-    print(convert('PAYPALISHIRING', 3))
+def midorder(root: TreeNode):
+    if root is None: return []
+    stack = []
+    res = []
+    while stack:
+        while root:
+            stack.append(root)
+            root = root.left
+        node = stack.pop()
+        res.append(node)
+        root = node.right

@@ -51,3 +51,5 @@
 >参考https://leetcode-cn.com/problems/valid-number/solution/biao-qu-dong-fa-by-user8973/
 >
 >![](https://pic.leetcode-cn.com/0683d701f2948a2bd8c235867c21a3aed5977691f129ecf34d681d43d57e339c-DFA.jpg)
+>
+>另一个：https://leetcode-cn.com/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/solution/mian-shi-ti-20-biao-shi-shu-zhi-de-zi-fu-chuan-y-2/
