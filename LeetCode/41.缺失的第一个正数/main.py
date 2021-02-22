@@ -32,3 +32,20 @@ class Solution2:
             if nums[i] > 0:
                 return i + 1
         return n + 1
+
+class Solution3:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        i = 0
+        n = len(nums)
+        while i < len(nums):
+            if 0 < nums[i] < n and nums[nums[i] - 1] != nums[i]:
+                tmp = nums[nums[i] - 1]
+                nums[nums[i] - 1] = nums[i]
+                nums[i] = tmp
+            else:
+                i += 1
+
+        for i, num in enumerate(nums):
+            if num != i+1:
+                return i + 1
+        return n + 1

@@ -13,7 +13,7 @@ class Solution:
         while i != j:
             i = i.next
             j = j.next
-            if i is None and j is not None: i = headB
-            if j is None and i is not None: j = headA
             if i is None and j is None: return
+            if i is None: i = headB
+            if j is None: j = headA
         return i

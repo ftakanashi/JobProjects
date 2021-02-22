@@ -66,3 +66,6 @@ candidates 中的每个数字在每个组合中只能使用一次。
 if i > start and candidates[i-1] == candidates[i]:
     continue
 ```
+
+>2021.02.21
+>为什么这题一定要先排序。是因为为了去重。上面这行基于`candidiate[i-1] == candidates[i]`显然只有数组有序的情况下才能用
