@@ -6,7 +6,7 @@ class ListNode:
         self.val = x
         self.next = None
 
-class Solution:
+class Solution1:
     def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
         if head is None or head.next is None or m == n: return head
         dummy = ListNode(-1)
@@ -34,4 +34,23 @@ class Solution:
         # 重新整理连接：
         prev.next = last_node
         tail.next = i
+        return dummy.next
+
+
+class Solution2:
+    def reverseBetween(self, head: ListNode, left: int, right: int) -> ListNode:
+        dummy = ListNode(-1, head)
+        idx, h, stack = 1, dummy, []
+        while idx < left:
+            h = h.next
+            idx += 1
+        node = h.next    # 反转片段的起点
+        for _ in range(right - left + 1):
+            stack.append(node)
+            node = node.next
+        tail = stack[-1].next
+        while stack:
+            h.next = stack.pop()
+            h = h.next
+        h.next = tail
         return dummy.next
