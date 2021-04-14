@@ -6,7 +6,7 @@ class ListNode:
         self.val = val
         self.next = next
 
-class Solution:
+class Solution1:
     def rotateRight(self, head: ListNode, k: int) -> ListNode:
         if head is None: return
 
@@ -33,4 +33,21 @@ class Solution:
         res = i.next
         i.next = None
         j.next = head
+        return res
+
+class Solution2:
+    def rotateRight(self, head: ListNode, k: int) -> ListNode:
+        if not head or not head.next: return head
+        i, n = head, 1
+        while i.next is not None:
+            n += 1
+            i = i.next
+        k = k % n
+        i.next = head
+
+        while n > k:
+            n -= 1
+            i = i.next
+        res = i.next
+        i.next = None
         return res

@@ -9,6 +9,7 @@ class Solution:
 
         nums.sort(reverse=True)
         edges = [0, 0, 0, 0]
+
         def dfs(start: int) -> bool:
             if start == len(nums):
                 return edges[0] == edges[1] == edges[2] == edges[3] == e
@@ -18,4 +19,5 @@ class Solution:
                     if dfs(start + 1): return True
                     edges[i] -= nums[start]    # 回溯
             return False
+
         return dfs(0)

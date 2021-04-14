@@ -37,3 +37,15 @@ class Solution2:
         head.next.next = head
         head.next = None
         return res
+
+class Solution3:
+    def reverseList(self, head: ListNode) -> ListNode:
+
+        def rec(node: ListNode):
+            if node is None or node.next is None: return node, node
+            h, t = rec(node.next)
+            node.next = None
+            t.next = node
+            return h, node
+
+        return rec(head)[0]
