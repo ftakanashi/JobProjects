@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
-def key(x):
-    return x
+import sys
 
-l = [2,4,1,5,6]
-l.sort(key=key)
-print(l)
+def main():
+    lines = sys.stdin.read().strip().split('\n')
+
+
+if __name__ == '__main__':
+    main()
