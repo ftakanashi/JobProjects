@@ -1,4 +1,6 @@
->参考：https://github.com/Snailclimb/JavaGuide/blob/master/docs/database/MySQL.md
+>参考1：https://github.com/Snailclimb/JavaGuide/blob/master/docs/database/MySQL.md
+>
+>参考2: https://mp.weixin.qq.com/s/IiJYHoAxqTnqW0LfRAh2BQ
 >
 >索引：https://zhuanlan.zhihu.com/p/352181863
 

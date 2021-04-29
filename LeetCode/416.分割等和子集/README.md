@@ -39,7 +39,7 @@
 
 转移方程：
 ```python
-if dp[i-1][j] or    # 不取下标i数的情况
+if dp[i-1][j] or \   # 不取下标i数的情况
    j - nums[i - 1] >= 0 and dp[i-1][j - nums[i - 1]]:    # 取的情况
 
     dp[i][j] = True
