@@ -29,7 +29,6 @@ Dijkstra算法基于贪心思想。
 Talk is cheap. 下面给出一个基于邻接矩阵实现的图的Dijkstra算法代码：
 ```python
 def dijkstra(graph, start):
-    # graph是一个collection.defaultdict(list)实现的邻接表
     dist = [float('inf') for _ in range(len(graph))]
     heap = [(0, start)]
     while heap:
@@ -89,3 +88,13 @@ def dijkstra(maze, start, end):
                 heapq.heappush(heap, (nd, nx, ny))
     return -1
 ```
+
+## 分析
+对于图`G = (V, E)`。
+
+时间复杂度方面，
+创建结果容器等准备阶段的工作是`O(V)`的。
+而主体循环阶段是`O(ElogE)`的。
+所以整体时间复杂度在`O(V + ElogE)`左右。
+
+空间复杂度自然是`O(E + V)`。堆中保存E条边，结果容器dist中保存V个节点的信息。

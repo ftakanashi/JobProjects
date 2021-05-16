@@ -43,3 +43,27 @@ class Solution1:
                 uf.union(i, j)
                 cost += c
         return cost
+
+import heapq
+class Solution2:
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        points = [tuple(p) for p in points]
+
+        def dist(p1, p2):
+            return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+
+        queue = []
+        p = points[0]
+        visited = set([p,])
+        for i in range(1, len(points)):
+            heapq.heappush(queue, (dist(p, points[i]), p, points[i]))
+
+        res = 0
+        while queue and len(visited) < len(points):
+            edge, a, b = heapq.heappop(queue)
+            if b in visited: continue
+            res += edge
+            visited.add(b)
+            for p in points:
+                if p not in visited: heapq.heappush(queue, (dist(b, p), b, p))
+        return res

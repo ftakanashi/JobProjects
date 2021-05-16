@@ -1,45 +1,18 @@
 from typing import List
 
-def getMaxMatrix(matrix: List[List[int]]) -> List[int]:
-
-    def getStartEnd(nums):
-        dp = ans = nums[0]
-        ans_end, ans_start = 0, 0
-        for i in range(1, len(nums)):
-            if dp + nums[i] < nums[i]:
-                dp = nums[i]
-                if ans < dp:
-                    ans_start = ans_end = i
-                    ans = dp
+def findDuplicates(nums: List[int]) -> List[int]:
+    i = 0
+    res = set()
+    while i < len(nums):
+        if nums[i] != i + 1:
+            if nums[nums[i] - 1] == nums[i]:
+                res.add(nums[i])
+                i += 1
             else:
-                dp = nums[i] + dp
-                if ans < dp:
-                    ans_end = i
-                    ans = dp
-        return ans_start, ans_end, ans
+                tmp1, tmp2 = nums[i], nums[nums[i] - 1]
+                nums[i], nums[tmp1 - 1] = tmp2, tmp1
+        else:
+            i += 1
+    return res
 
-    ans = [0, 0, 0, 0]
-    ans_sum = float('-inf')
-    m, n = len(matrix), len(matrix[0])
-    presum = [[0 for _ in range(n)] for _ in range(m)]
-    presum[0] = matrix[0].copy()
-    for i in range(1, m):
-        for j in range(n):
-            presum[i][j] = presum[i-1][j] + matrix[i][j]
-
-    for i in range(m):
-        for j in range(i, m):
-            nums = presum[j].copy()
-            if i > 0:
-                for k in range(n): nums[k] -= presum[i-1][k]
-
-            start, end, max_sum = getStartEnd(nums)
-            if max_sum > ans_sum:
-                ans_sum = max_sum
-                ans = [i, start, j, end]
-
-    return ans
-
-print(getMaxMatrix(
-    [[-4, -5]]
-))
+print(findDuplicates([4,3,2,7,8,2,3,1]))
