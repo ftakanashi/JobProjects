@@ -13,3 +13,11 @@ class Solution1:
                 found_one = True
             n = n >> 1
         return i & 1 == 1
+
+class Solution2:
+    def isPowerOfFour(self, n: int) -> bool:
+        return n > 0 and n & (n-1) == 0 and n & 0x55555555 > 0
+
+class Solution3:
+    def isPowerOfFour(self, n: int) -> bool:
+        return n > 0 and n & (n-1) == 0 and n % 3 == 1

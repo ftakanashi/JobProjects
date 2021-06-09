@@ -90,6 +90,20 @@ def MergeSort2(lst):
 
     recursive_sort(lst, 0, len(lst) - 1)
 
+# 一个非游标形式的merge函数
+def merge(lst1, lst2):
+    '''
+    本函数来源于解LC.321的过程中。
+    通过【列表间互相比对大小】来实现merge操作
+    一般而言由于用到了列表间大小比对，时空都会耗费更多资源，但是诸如LC.321之类的，非典型意义的归并merge时可能会有用。
+    '''
+    res = []
+    while lst1 and lst2:
+        smaller = lst1 if lst1 <= lst2 else lst2
+        res.append(smaller.pop(0))
+    if lst1: res.extend(lst1)
+    if lst2: res.extend(lst2)
+    return res
 
 if __name__ == '__main__':
     test_data = [2,5,3,4,1,3,6,8,7]

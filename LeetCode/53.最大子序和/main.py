@@ -1,7 +1,7 @@
 #!/usr/bin/nev python
 from typing import List
 
-class Solution:
+class Solution1:
     def maxSubArray(self, nums: List[int]) -> int:
         n = len(nums)
 
@@ -20,3 +20,24 @@ class Solution:
         #     dp[i] = max(dp[i-1]+nums[i], nums[i])
         #
         # return max(dp)
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        presum = [0,]
+        for num in nums:
+            presum.append(presum[-1] + num)
+
+        ans = float('-inf')
+        min_v = float('inf')
+        for s in presum:
+            ans = max(ans, s - min_v)
+            if s < min_v: min_v = s
+        return ans
+
+        # 使用堆的方案
+        # heap = []
+        # for s in presum:
+        #     if heap:
+        #         ans = max(ans, s - heap[0])
+        #     heapq.heappush(heap, s)
+        # return ans
