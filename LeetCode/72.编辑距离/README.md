@@ -57,7 +57,9 @@ DP数组和那题一模一样，都是一个空出一个空字符的二维矩阵
 
 综上所述，转移方程定义如下：
 ```python
-dp[i][j] = min(dp[i-1][j] + 1, dp[i][j-1] + 1, dp[i-1][j-1] + 0 if word1[i-1] == word2[j-1] else 1)
+dp[i][j] = min(dp[i-1][j] + 1, 
+               dp[i][j-1] + 1, 
+               dp[i-1][j-1] + 0 if word1[i-1] == word2[j-1] else 1)
 ```
 
 有了上述思想之后，写dp就不困难了。

@@ -33,10 +33,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/LeetCode" />
+      <recent name="$PROJECT_DIR$/算法专题" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/PlayGround/图" />
       <recent name="$PROJECT_DIR$/学习/操作系统" />
-      <recent name="$PROJECT_DIR$/学习" />
-      <recent name="$PROJECT_DIR$/PlayGround" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/LeetCode专题/排序" />
@@ -46,29 +46,7 @@
       <recent name="$PROJECT_DIR$/LeetCode专题/二分查找" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tmp (1)">
-    <configuration name="alibaba20210322" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="JobProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tmp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/笔试记录/阿里20210322/alibaba20210322.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.tmp">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,6 +113,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tmp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="JobProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tmp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tmp/tmp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="JobProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tmp" />
         <item itemvalue="Python.tmp (1)" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.tools" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.alibaba20210322" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +313,17 @@
       <workItem from="1623043502223" duration="10531000" />
       <workItem from="1623080909787" duration="1401000" />
       <workItem from="1623147669796" duration="7179000" />
-      <workItem from="1623168753476" duration="3273000" />
+      <workItem from="1623168753476" duration="13351000" />
+      <workItem from="1623426349332" duration="17136000" />
+      <workItem from="1623921808295" duration="14129000" />
+      <workItem from="1624239040036" duration="3681000" />
+      <workItem from="1624252495099" duration="13074000" />
+      <workItem from="1624344043672" duration="3959000" />
+      <workItem from="1624411847816" duration="2467000" />
+      <workItem from="1624418614566" duration="14547000" />
+      <workItem from="1624503959398" duration="1230000" />
+      <workItem from="1624535291564" duration="5128000" />
+      <workItem from="1624594981890" duration="12377000" />
     </task>
     <servers />
   </component>
@@ -321,6 +331,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="296" y="283" key="#SQL_方言" timestamp="1623929461266">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="296" y="283" key="#SQL_方言/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1623929461266" />
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616417258976">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -334,74 +348,83 @@
       <screen x="-226" y="-1080" width="1920" height="1080" />
     </state>
     <state x="438" y="-925" key="#tmp_(1)/0.0.1440.900/-226.-1080.1920.1080@-226.-1080.1920.1080" timestamp="1619249432426" />
-    <state x="498" y="113" key="#xdebugger.evaluate" timestamp="1621911747189">
+    <state x="499" y="317" key="#xdebugger.evaluate" timestamp="1624582360860">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="499" y="317" key="#xdebugger.evaluate/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624582360860" />
     <state x="498" y="113" key="#xdebugger.evaluate/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621911747189" />
-    <state x="498" y="113" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1616416303888" />
-    <state x="478" y="327" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614649653954">
+    <state x="499" y="317" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1624520513005" />
+    <state width="662" height="466" key="DebuggerActiveHint" timestamp="1624582278565">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="478" y="327" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1614649653954" />
+    <state width="662" height="466" key="DebuggerActiveHint/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624582278565" />
     <state x="507" y="212" key="FileChooserDialogImpl" timestamp="1616379200040">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="507" y="212" key="FileChooserDialogImpl/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1616379200040" />
-    <state width="1398" height="237" key="GridCell.Tab.0.bottom" timestamp="1621915245790">
+    <state width="1398" height="237" key="GridCell.Tab.0.bottom" timestamp="1624597224740">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="237" key="GridCell.Tab.0.bottom/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624597224740" />
     <state width="1878" height="297" key="GridCell.Tab.0.bottom/0.0.1440.900/-226.-1080.1920.1080@-226.-1080.1920.1080" timestamp="1619249439720" />
     <state width="1398" height="237" key="GridCell.Tab.0.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245790" />
-    <state width="1398" height="294" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1621179775071" />
+    <state width="1398" height="237" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1624523366424" />
     <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1617289921295" />
     <state width="1878" height="297" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1619309980761" />
-    <state width="1398" height="237" key="GridCell.Tab.0.center" timestamp="1621915245788">
+    <state width="1398" height="237" key="GridCell.Tab.0.center" timestamp="1624597224738">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="237" key="GridCell.Tab.0.center/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624597224738" />
     <state width="1878" height="297" key="GridCell.Tab.0.center/0.0.1440.900/-226.-1080.1920.1080@-226.-1080.1920.1080" timestamp="1619249439719" />
     <state width="1398" height="237" key="GridCell.Tab.0.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245788" />
-    <state width="1398" height="294" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1621179775069" />
+    <state width="1398" height="237" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1624523366423" />
     <state width="1398" height="238" key="GridCell.Tab.0.center/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1617289921293" />
     <state width="1878" height="297" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1619309980754" />
-    <state width="1398" height="237" key="GridCell.Tab.0.left" timestamp="1621915245787">
+    <state width="1398" height="237" key="GridCell.Tab.0.left" timestamp="1624597224737">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="237" key="GridCell.Tab.0.left/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624597224737" />
     <state width="1878" height="297" key="GridCell.Tab.0.left/0.0.1440.900/-226.-1080.1920.1080@-226.-1080.1920.1080" timestamp="1619249439718" />
     <state width="1398" height="237" key="GridCell.Tab.0.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245787" />
-    <state width="1398" height="294" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1621179775068" />
+    <state width="1398" height="237" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1624523366422" />
     <state width="1398" height="238" key="GridCell.Tab.0.left/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1617289921292" />
     <state width="1878" height="297" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1619309980752" />
-    <state width="1398" height="237" key="GridCell.Tab.0.right" timestamp="1621915245789">
+    <state width="1398" height="237" key="GridCell.Tab.0.right" timestamp="1624597224739">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="237" key="GridCell.Tab.0.right/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624597224739" />
     <state width="1878" height="297" key="GridCell.Tab.0.right/0.0.1440.900/-226.-1080.1920.1080@-226.-1080.1920.1080" timestamp="1619249439720" />
     <state width="1398" height="237" key="GridCell.Tab.0.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245789" />
-    <state width="1398" height="294" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1621179775070" />
+    <state width="1398" height="237" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1624523366423" />
     <state width="1398" height="238" key="GridCell.Tab.0.right/0.23.1440.877/-226.-1057.1920.1057@0.23.1440.877" timestamp="1617289921294" />
     <state width="1878" height="297" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1619309980758" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1621915245782">
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom" timestamp="1624594720306">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624594720306" />
     <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245782" />
-    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1621179775072" />
+    <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1624523366416" />
     <state width="1398" height="294" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1616660317834" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1621915245778">
+    <state width="1398" height="294" key="GridCell.Tab.1.center" timestamp="1624594720305">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="294" key="GridCell.Tab.1.center/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624594720305" />
     <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245778" />
-    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1621179775071" />
+    <state width="1398" height="294" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1624523366415" />
     <state width="1398" height="294" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1616660317833" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1621915245778">
+    <state width="1398" height="294" key="GridCell.Tab.1.left" timestamp="1624594720304">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="294" key="GridCell.Tab.1.left/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624594720304" />
     <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245778" />
-    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1621179775071" />
+    <state width="1398" height="294" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1624523366415" />
     <state width="1398" height="294" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1616660317832" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1621915245781">
+    <state width="1398" height="294" key="GridCell.Tab.1.right" timestamp="1624594720305">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="294" key="GridCell.Tab.1.right/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624594720305" />
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1621915245781" />
-    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1621179775072" />
+    <state width="1398" height="294" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1624523366416" />
     <state width="1398" height="294" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1616660317833" />
     <state x="384" y="223" width="601" height="490" key="find.popup" timestamp="1623203398240">
       <screen x="0" y="0" width="1440" height="900" />
@@ -409,10 +432,10 @@
     <state x="384" y="223" width="601" height="490" key="find.popup/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1623203398240" />
     <state x="384" y="223" width="601" height="490" key="find.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1622776875277" />
     <state x="419" y="205" width="601" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1622256257176" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1623204164196">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1624586736062">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1623204164196" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/-247.-1080.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1624586736062" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-226.-1080.1920.1080@0.0.1440.900" timestamp="1622786632891" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1622254867133" />
   </component>
@@ -433,11 +456,6 @@
           <url>file://$PROJECT_DIR$/LeetCode/54.螺旋矩阵/main.py</url>
           <line>24</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PlayGround/tmp/tmp.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -461,10 +479,10 @@
     <SUITE FILE_PATH="coverage/JobProjects$quick_sort.coverage" NAME="quick_sort Coverage Results" MODIFIED="1613275782381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
     <SUITE FILE_PATH="coverage/JobProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1616417443224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/笔试记录/阿里20210322-第一题" />
     <SUITE FILE_PATH="coverage/JobProjects$heap_func.coverage" NAME="heap_func Coverage Results" MODIFIED="1611891231735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/堆" />
-    <SUITE FILE_PATH="coverage/JobProjects$tmp__1_.coverage" NAME="tmp (1) Coverage Results" MODIFIED="1621911624798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/tmp" />
+    <SUITE FILE_PATH="coverage/JobProjects$tmp__1_.coverage" NAME="tmp (1) Coverage Results" MODIFIED="1624033513961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/tmp" />
     <SUITE FILE_PATH="coverage/JobProjects$ShellSort.coverage" NAME="ShellSort Coverage Results" MODIFIED="1604976356748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/排序算法" />
     <SUITE FILE_PATH="coverage/JobProjects$unionfind.coverage" NAME="unionfind Coverage Results" MODIFIED="1608520490575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
-    <SUITE FILE_PATH="coverage/JobProjects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1619846228066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlayGround/图" />
+    <SUITE FILE_PATH="coverage/JobProjects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1624596407775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
     <SUITE FILE_PATH="coverage/JobProjects$amazon1.coverage" NAME="amazon1 Coverage Results" MODIFIED="1613964870445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
   </component>
 </project>

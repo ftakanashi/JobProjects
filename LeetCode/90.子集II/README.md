@@ -32,3 +32,38 @@
 换句话说，从某层递归中，虽然从参数给出的`start`位置开始考虑，但是如果`start`位置后面排着一排一模一样的，那么这些都可以跳过。
 
 具体的跳过操作通过设置一个prev实现。
+
+#### 2021/06/21追加笔记
+补充一个比较好看的写法：
+```python
+from typing import List
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        n = len(nums)
+        nums.sort()
+
+        def dfs(pos, subres):
+            res.append(subres.copy())
+            i = pos
+            while i < n:
+                subres.append(nums[i])
+                dfs(i + 1, subres)
+                subres.pop()
+                while i < n-1 and nums[i] == nums[i+1]:
+                    i += 1
+                i += 1
+
+        dfs(0, [])
+        return res    
+```
+
+在构建dfs探索的过程中应该注意到，代码中的`dfs(i+1, subres)`其实是指"取了`nums[i]`的情况"。
+而没取的情况则是在`subres.pop()`之后发生的。
+
+至于为了避免重复的答案，其实只需要考虑后一种情况。
+比如输入中有两个重复的数字`n n`。若取了第一个`n`，那么对于第二个其实取和不取都是合理的考虑（前者构成两个n的子集）。
+只有当没取第一个`n`时，才需要考虑取第二个`n`是重复的结果。
+
+因此，在`subres.pop()`之后，即没取第一个`n`时，如果发现后一个数也还是`n`，那么就没必要考虑取这个后一个数的情况。
+于是就可以直接通过`i+=1`跳过。
