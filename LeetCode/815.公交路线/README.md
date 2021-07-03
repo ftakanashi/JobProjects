@@ -45,3 +45,25 @@ sum(routes[i].length) <= 105
 
 也因为累计cost就是向外移动的层数，因此cost是稳固增长的。
 因此，原本BFS探索最短路径时需要的优先队列在这里可以换成普通队列，因为后入队的节点，总是更远的节点。
+
+#### 2021/06/28追加笔记
+最近几天的题目一直是BFS，做出点心得来了。上次第一次看到这题，觉得将公交路线本身视为节点而不是站点视为节点这个思路很异想天开。
+但是这次第一次看到后，可以说觉得没那么神奇了。
+
+另外BFS探索图中最短路径的范式也大概找到了：
+```text
+queue.append((start, 根据题目要求为1或者0))
+seen = set()
+while queue:
+    node, times = queue.popleft()
+    if node符合要求:
+        return 或者 记录结果并break
+    if node in seen:
+        为了防止循环探索 continue
+    seen.add(node)
+    for nxt in node.next_nodes_in_graph:
+        if nxt符合要求:
+            queue.append((nxt, times + 1))
+
+return 默认值如-1
+```
