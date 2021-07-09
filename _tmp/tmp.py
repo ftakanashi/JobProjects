@@ -1,10 +1,19 @@
-#!/usr/bin/env python
+from typing import List
+from collections import Counter
 
-def slide_window(array):
-    n = len(array)
-    left, right = 0, 0    # 两个指针都初始化在起始位置，window就是left和right间的闭区间
+class Solution:
+    def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
+        s = ans = 0
+        counter = Counter([0,])
+        for num in nums:
+            s += num
+            if goal - s in counter:
+                ans += counter[goal - s]
+                print(s, goal-s)
+            counter[s] += 1
+        return ans
 
-    while right < n:
-
-        while not check_window():
-            # 当滑窗不符合要求时
+if __name__ == '__main__':
+    s = Solution()
+    res = s.numSubarraysWithSum([1,0,1,0,1], 2)
+    print(res)
