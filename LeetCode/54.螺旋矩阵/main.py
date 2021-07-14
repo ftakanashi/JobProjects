@@ -46,3 +46,36 @@ class Solution2:
                     res.append(matrix[row][left])
             left, right, top, bottom = left + 1, right - 1, top + 1, bottom - 1
         return res
+
+
+class Solution3:
+    '''
+    这种做法最容易记忆，记这种。
+    '''
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        if not matrix or not matrix[0]: return []
+        m, n = len(matrix), len(matrix[0])
+        top, bottom, left, right = 0, m-1, 0, n-1
+        res = []
+        while top <= bottom and left <= right:
+            for j in range(left, right+1):
+                res.append(matrix[top][j])
+            top += 1
+            if top > bottom: break
+
+            for i in range(top, bottom + 1):
+                res.append(matrix[i][right])
+            right -= 1
+            if left > right: break
+
+            for j in range(right, left - 1, -1):
+                res.append(matrix[bottom][j])
+            bottom -= 1
+            if top > bottom: break
+
+            for i in range(bottom, top - 1, -1):
+                res.append(matrix[i][left])
+            left += 1
+            if left > right: break
+
+        return res

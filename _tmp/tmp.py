@@ -1,19 +1,38 @@
 from typing import List
-from collections import Counter
 
 class Solution:
-    def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
-        s = ans = 0
-        counter = Counter([0,])
-        for num in nums:
-            s += num
-            if goal - s in counter:
-                ans += counter[goal - s]
-                print(s, goal-s)
-            counter[s] += 1
-        return ans
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        m, n = len(matrix), len(matrix[0])
+        l = 0
+        res = []
+        while len(res) < m * n:
+
+            j = l
+            while j < n-l:
+                res.append(matrix[l][j])
+                j += 1
+            res.pop()
+            i = l
+            while i < m-l:
+                res.append(matrix[i][n-l-1])
+                i += 1
+            res.pop()
+            j = n-l-1
+            while j >= l:
+                res.append(matrix[m-l-1][j])
+                j -= 1
+            res.pop()
+            i = m-l-1
+            while i >= l:
+                res.append(matrix[i][l])
+                i -= 1
+            res.pop()
+
+            l += 1
+
+        return res
 
 if __name__ == '__main__':
     s = Solution()
-    res = s.numSubarraysWithSum([1,0,1,0,1], 2)
+    res = s.spiralOrder([[1,2,3,],[4,5,6],[7,8,9]])
     print(res)
