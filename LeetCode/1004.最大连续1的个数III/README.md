@@ -124,7 +124,7 @@ has_zero这个变量完全是多余的，可以去掉后调整代码。
 ```text
 初始化:
     N = len(nums)
-    left, right = 0, 0
+    left, right = 0, 0 或者 0, 1
     res = 0
     check = 0
 
@@ -132,7 +132,7 @@ has_zero这个变量完全是多余的，可以去掉后调整代码。
 while right < N:
     update(check, nums[left,right])  用最新窗口更新check
     
-    while not check:移动左指针
+    while not check:    # 移动左指针
         update(check, nums[left, right])  用最新窗口更新check
         left += 1 
     
@@ -142,4 +142,18 @@ while right < N:
 
 返回结果：
 return res
+```
+
+另一种表述：
+```text
+# 滑动窗口模板
+left,right = 0, (0 or 1)
+ret = total = 0
+while right < len(nums):
+   更新total值
+   while 窗口内数据不满足要求
+      1. 更新total值
+      2. 收缩左边界
+   更新ret最大值
+返回 ret
 ```

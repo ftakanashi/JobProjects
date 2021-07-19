@@ -26,17 +26,3 @@ class Solution1:
 
         partition(0, len(nums) - 1)
         return ''.join([str(i) for i in nums])
-
-class Solution2:
-    def nthUglyNumber(self, n: int) -> int:
-        p2 = p3 = p5 = 0
-        nums = [-1 for _ in range(n)]
-        nums[0] = 1
-        for i in range(1, n):
-            v2, v3, v5 = nums[p2] * 2, nums[p3] * 3, nums[p5] * 5
-            min_v = min(v2, v3, v5)
-            nums[i] = min_v
-            if min_v == v2: p2 += 1
-            if min_v == v3: p3 += 1
-            if min_v == v5: p5 += 1
-        return nums[-1]
