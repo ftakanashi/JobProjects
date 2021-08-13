@@ -1,18 +1,17 @@
-#!/usr/bin/env python
+global glb
 
-def gcd(x, y):
-    if x < y: x, y = y, x
-    while y > 0:
-        x, y = y, x % y
-    return x
+class Test:
+    def __init__(self):
+        pass
 
-def sct(x, y):
-    g = gcd(x, y)
-    return g * (x // g) * (y // g)
+def main():
+    a = 1
+    t = 2
+    print(dir())
+    print(locals().keys())
+    print(globals().keys())
 
 if __name__ == '__main__':
-    lst = [2,6,20]
-    s = sct(lst[0], lst[1])
-    for i in range(2, len(lst)):
-        s = sct(s, lst[i])
-    print(s)
+    main()
+    t = Test()
+    print(help(locals))

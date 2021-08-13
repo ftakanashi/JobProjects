@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+from typing import List
 from functools import lru_cache as cache
 
 # Definition for a binary tree node.

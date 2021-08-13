@@ -13,5 +13,4 @@ class Solution:
             dp[i][2] = max(dp[i-1][2], dp[i-1][1] + p)
             dp[i][3] = max(dp[i-1][3], dp[i-1][2] - p)
             dp[i][4] = max(dp[i-1][4], dp[i-1][3] + p)
-
         return max(dp[-1])

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-from typing import List
+'''
+    通用记忆模板见README.md
+'''
 
 class UnionFind:
     '''

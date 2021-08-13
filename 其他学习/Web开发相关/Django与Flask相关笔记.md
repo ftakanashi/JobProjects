@@ -308,6 +308,23 @@ restful规范是一种软性的，推荐性的规定。即你可以用Django不�
   {code: 1001, msg: 'xxx not found'}
   ```
 
+### restfulAPI与普通API的区别
+
+普通的API，通常对于特定的一个谓语都要安排一个特定的接口。比如对于product模型的增删查改，可能需要
+
+```
+/getproduct.aspx
+/createproduct.aspx
+/updateproduct.aspx
+/deleteproduct.aspx
+```
+
+四个接口。
+
+而显然，restfulAPI只需要一个`/product`接口，然后根据不同的HTTP方法作为谓语与其组合即可。
+
+此外，还需要考虑到众多浏览器也已经遵循了restful协议。比如浏览器通常默认GET方法是幂等的，因此失败会自动重发。但是普通API的写操作也是GET方法，这就引起了数据不一致的风险。
+
 ## rest_framework插件的基本组件
 
 - 视图组件 ViewSet

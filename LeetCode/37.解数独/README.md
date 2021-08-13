@@ -34,3 +34,39 @@ board[i][j] 是一位数字或者 '.'
 通过与`(1 << (n-1))`进行`|=`, `^=`和`&是否大于0`运算，可以类似地进行add, remove, in等哈希检查操作。
 
 整体代码稍微有点长，但是不要怕，不难。 
+
+#### 2021/08/10 解法一的优化
+> https://www.nowcoder.com/practice/78a1a4ebe8a34c93aac006c44f6bf8a1?tpId=37&&tqId=21267&rp=1&ru=/ta/huawei&qru=/ta/huawei/question-ranking
+
+在牛客上做这题，写了类似的以`dfs(x, y)`为入口的代码。但是超时。
+真是特么日了狗了……
+
+分析了一下，若以坐标`x, y`作为dfs的入口参数，则实际上，每次扫描到一个新位置时，
+都会进入新的一层DFS，而CPU执行这个过程要进行上下文的切换。
+可能就是这个上下文切换，比较费时间。
+
+为了克服这个困难，就需要找一个dfs的方法可以不以坐标作为入口。
+一个自然的想法就是直接`dfs()`，然后扫描的过程中碰到非0位置，直接跳过。
+大概的样子是这样的：
+```python
+def dfs():
+    for i in range(9):
+        for j in range(9):
+            if grid[i][j] != 0: continue
+            for cand in range(1, 10):
+                if not check(i, j, cand): continue
+                grid[i][j] = cand
+                update(i, j, cand)
+                if dfs(): return True
+                grid[i][j] = 0
+                remove(i, j, cand)
+            return False
+
+    return True
+```
+
+虽然看着很费时，因为进入下一层dfs后要从新从`0,0`位置开始扫描一边全表。
+但是别忘了这个表大小是固定的，且只有9 * 9的81。
+事实证明，即使这么从头扫，也比递归上下文切换花的时间少…
+
+优化后的代码也加入到main.py里了。记得参考。
