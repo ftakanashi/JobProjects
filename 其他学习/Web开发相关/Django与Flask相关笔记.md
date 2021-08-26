@@ -117,7 +117,7 @@ settings中MIDDLEWARE是一个列表，而这个列表中注册的中间件是�
 相反，process_template_response和process_response都发生在视图函数被调用后，因此中间件执行顺序是反过来的，即MIDDLEWARE列表的逆序。
 至于process_exception，由于其发生在视图函数被调用时，实际上已经进入视图函数，只不过没执行完，所以返回的时候，中间件是按照response的逆序来执行，处理这个异常的。
 
-另外还需要提一句，中间件可以做到“短路”。比如上面说的，在process_view中直接返回HttpResponse对象的话，就可以让Django不去执行视图函数了。
+另外还需要提一句，==中间件可以做到“短路”。比如上面说的，在process_view中直接返回HttpResponse对象的话，就可以让Django不去执行视图函数了。==
 
 ## 常见的（内建）中间件
 
@@ -167,7 +167,7 @@ data:{
 
 ## QuerySet的特点
 
-通过Django ORM获取数据之后，得到的最直观的是一个QuerySet对象。这个对象有两个特点：惰性查询、自带缓存。
+通过Django ORM获取数据之后，得到的最直观的是一个QuerySet对象。这个对象有两个特点：==惰性查询、自带缓存==。
 
 ==惰性查询，是指生成QuerySet的表达式写完，并可能将其赋值给某个代表了QuerySet的变量后。此时其实ORM并不会真的去数据库取数据。只有当这个QuerySet在后续的代码里被用到时，ORM才会去取数据，称之为QuerySet的执行（evaluation)==。例：
 
@@ -397,6 +397,8 @@ application指那些通过Django、Flask等框架写成的Web应用本身。
 以上三者的关系，带上周边的一些概念，所有关系可以表示如下：
 
 <img src="/Users/wyzypa/Pictures/TyporaImages/Django与Flask相关笔记.asset/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTQ1NTAxNQ==,size_16,color_FFFFFF,t_70.png" alt="在这里插入图片描述" style="zoom: 67%;" />
+
+==总结一下，就是uWSGI这个软件实现了wsgi协议的server部分，从而可以通过wsgi协议与Django App进行通信；同时也实现了uwsgi协议，可以与前端实现了uwsgi协议的服务器如Nginx进行通信。==
 
 # 其他
 
