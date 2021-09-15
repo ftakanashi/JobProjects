@@ -77,3 +77,31 @@ class MedianFinder:
             return (self.minHeap.peek() + self.maxHeap.peek()) / 2
         elif len(self.maxHeap) == len(self.minHeap) + 1:
             return self.maxHeap.peek()
+
+import heapq
+class MedianFinder2:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.low = []
+        self.high = []
+
+    def addNum(self, num: int) -> None:
+        if self.high and num < self.high[0]:
+            heapq.heappush(self.low, -num)
+            if len(self.low) > len(self.high):
+                tmp = -heapq.heappop(self.low)
+                heapq.heappush(self.high, tmp)
+        else:
+            heapq.heappush(self.high, num)
+            if len(self.high) > len(self.low) + 1:
+                tmp = heapq.heappop(self.high)
+                heapq.heappush(self.low, -tmp)
+
+    def findMedian(self) -> float:
+        if (len(self.low) + len(self.high)) & 1 == 0:
+            return (self.high[0] - self.low[0]) / 2
+        else:
+            return self.high[0]

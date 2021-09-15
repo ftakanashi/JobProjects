@@ -1,32 +1,37 @@
-import sys
+#
+# 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+#
+# 获取最小运算此参数
+# @param x int整型
+# @param y int整型
+# @return int整型
+#
+from collections import deque
+class Solution:
+    def getMinOpsCount(self , x , y ):
+        # write code here
+        if x > y: x, y = y, x
+        base_ans = 0
+        if y == 0: return abs(x)
+        elif y > 0 and x <= 0:
+            base_ans = abs(x) + 1
+            x = 1
+        elif y < 0:
+            x, y = abs(y), abs(x)
 
-def process(grid):
-    m, n = len(grid), len(grid[0])
-    direcs = [(0,1), (0,-1), (1,0), (-1,0)]
+        print(x, y, base_ans)
 
-    def dfs(x, y):
-        grid[x][y] = 2
-        for a, b in direcs:
-            nx, ny = x+a, y+b
-            if 0 <= nx < m and 0 <= ny < n and grid[nx][ny] == 1:
-                dfs(nx, ny)
+        queue = deque([(x, 0)])
+        seen = set()
+        while queue:
+            num, cur = queue.popleft()
+            if num in seen: continue
+            seen.add(num)
+            for cand in (num - 1, num + 1, num * 2):
+                if cand == y: return cur + 1 + base_ans
+                if cand not in seen:
+                    queue.append((cand, cur + 1))
 
-    ans = 0
-    for i in range(m):
-        for j in range(n):
-            if grid[i][j] == 1:
-                dfs(i, j)
-                ans += 1
-    return ans
-
-
-def main():
-    lines = sys.stdin.read().strip().split('\n')
-    grid = []
-    for l in lines:
-        grid.append([int(num) for num in l.strip().split(',')])
-
-    res = process(grid)
-    print(res)
-
-main()
+s = Solution()
+res = s.getMinOpsCount(1, 200)
+print(res)
