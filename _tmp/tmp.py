@@ -1,37 +1,35 @@
-#
-# 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-#
-# 获取最小运算此参数
-# @param x int整型
-# @param y int整型
-# @return int整型
-#
-from collections import deque
 class Solution:
-    def getMinOpsCount(self , x , y ):
-        # write code here
-        if x > y: x, y = y, x
-        base_ans = 0
-        if y == 0: return abs(x)
-        elif y > 0 and x <= 0:
-            base_ans = abs(x) + 1
-            x = 1
-        elif y < 0:
-            x, y = abs(y), abs(x)
+    def numDecodings(self, s: str) -> int:
+        n = len(s)
+        dp = [0 for _ in range(n + 1)]
+        dp[0] = 1
+        dp[1] = 9 if s[0] == '*' else 1
+        MOD = 10**9 + 7
+        for i in range(2, n+1):
+            prev, ch = s[i-2], s[i-1]
+            if ch == '*':
+                dp[i] += (dp[i-1] * 9)
+                if prev == '*':
+                    dp[i] += (dp[i-2] * 15)
+                elif prev == '0':
+                    pass
+                elif prev in '12':
+                    if prev == '1': dp[i] += (dp[i-2] * 10)
+                    else: dp[i] += (dp[i-2] * 7)
 
-        print(x, y, base_ans)
+            else:
+                if ch != '0':
+                    dp[i] += dp[i-1]
+                if prev == '*':
+                    dp[i] += (dp[i-2] * (2 if ch <= '6' else 1))
+                elif prev == '0':
+                    pass
+                elif int(prev+ch) <= 26:
+                    dp[i] += dp[i-2]
 
-        queue = deque([(x, 0)])
-        seen = set()
-        while queue:
-            num, cur = queue.popleft()
-            if num in seen: continue
-            seen.add(num)
-            for cand in (num - 1, num + 1, num * 2):
-                if cand == y: return cur + 1 + base_ans
-                if cand not in seen:
-                    queue.append((cand, cur + 1))
+            dp[i] %= MOD
+
+        return dp[-1]
 
 s = Solution()
-res = s.getMinOpsCount(1, 200)
-print(res)
+s.numDecodings('**')
