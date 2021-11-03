@@ -1,35 +1,51 @@
-class Solution:
-    def numDecodings(self, s: str) -> int:
-        n = len(s)
-        dp = [0 for _ in range(n + 1)]
-        dp[0] = 1
-        dp[1] = 9 if s[0] == '*' else 1
-        MOD = 10**9 + 7
-        for i in range(2, n+1):
-            prev, ch = s[i-2], s[i-1]
-            if ch == '*':
-                dp[i] += (dp[i-1] * 9)
-                if prev == '*':
-                    dp[i] += (dp[i-2] * 15)
-                elif prev == '0':
-                    pass
-                elif prev in '12':
-                    if prev == '1': dp[i] += (dp[i-2] * 10)
-                    else: dp[i] += (dp[i-2] * 7)
+#!/usr/bin/env python
+class ListNode:
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
 
-            else:
-                if ch != '0':
-                    dp[i] += dp[i-1]
-                if prev == '*':
-                    dp[i] += (dp[i-2] * (2 if ch <= '6' else 1))
-                elif prev == '0':
-                    pass
-                elif int(prev+ch) <= 26:
-                    dp[i] += dp[i-2]
+    def __repr__(self):
+        return f'<ListNode {self.val}>'
 
-            dp[i] %= MOD
+def quick_sort(head):
 
-        return dp[-1]
+    def swap(node1, node2):
+        a, b = node1.val, node2.val
+        node1.val, node2.val = b, a
 
-s = Solution()
-s.numDecodings('**')
+    def partition(start, end):
+        if start is end: return
+        dummy = ListNode(-1, start)
+        pivot = start.val
+        prev = dummy
+        k = start
+        j = i = start.next
+        while j is not end:
+            if j.val < pivot:
+                swap(i, j)
+                i = i.next
+                k = k.next
+                prev = prev.next
+
+            j = j.next
+
+        swap(start, k)
+
+        partition(start, prev)
+        partition(k.next, end)
+
+    partition(head, None)
+
+
+if __name__ == '__main__':
+    head = ListNode(3, ListNode(1, ListNode(5, ListNode(2, ListNode(4)))))
+    head = []
+    head = [1,1,2]
+    head = [1,2,3,4,5]
+    head = [5,4,3,2,1]
+
+    quick_sort(head)
+    i = head
+    while i is not None:
+        print(i.val, end=' ')
+        i = i.next
