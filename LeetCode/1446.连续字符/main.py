@@ -16,3 +16,16 @@ class Solution:
         max_len = max(max_len, j - i)
 
         return max_len
+
+class Solution2:
+    def maxPower(self, s: str) -> int:
+        ans = cnt = 0
+        std = None
+        for ch in s:
+            if ch == std:
+                cnt += 1
+            else:
+                ans = max(ans, cnt)
+                cnt = 1
+                std = ch
+        return max(ans, cnt)
