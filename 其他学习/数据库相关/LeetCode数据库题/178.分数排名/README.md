@@ -47,7 +47,7 @@ FROM Scores a ORDER BY a.Score DESC;
 ```
 
 ### 解法2 内置排名函数（顺便讲下各类稍高级的排名函数）
-解法1中的排名逻辑其实是日常工作中也常用的一种逻辑，因此MySQL其实已经有了相关的内置函数，`dense_rank`。
+解法1中的排名逻辑其实是日常工作中也常用的一种逻辑，因此MySQL(8.0版本以及之后)其实已经有了相关的内置函数，`dense_rank`。
 其具体用法如下：
 ```sql
 SELECT *, Dense_rank() OVER (ORDER BY Field) FROM Table;

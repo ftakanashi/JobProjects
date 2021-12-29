@@ -25,7 +25,8 @@ SELECT Salary FROM Employee ORDER BY Salary DESC LIMIT 1,1;
 ```
 
 但是这条SQL存在几个问题。
-首先，如果大家的工资一样高，那么就不存在第二高工资，所以在Salary之前应该加上DISTINCT。
+首先，如果大家的工资一样高，那么就不存在第二高工资，所以在Salary之前应该加上DISTINCT。或者也可以借用GROUP BY来进行去重操作，如：
+`SELECT Salary FROM Employee GROUP BY Salary ORDER BY Salary DESC LIMIT 1,1;`
 
 其次，当表中数据不足两条时，显然这条SQL返回的是空结果，即0行结果。
 但是题目要求在这种情况下要返回NULL。
