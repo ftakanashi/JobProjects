@@ -28,11 +28,10 @@ class Solution2:
     def increasingTriplet(self, nums: List[int]) -> bool:
         i, j = float('inf'), float('inf')
         for num in nums:
-            if num < i:
+            if num <= i:
                 i = num
-            elif i < num < j:
+            elif num <= j:
                 j = num
-            elif num > j:
+            else:
                 return True
-
         return False
