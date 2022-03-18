@@ -243,7 +243,7 @@ CONFIG SET requirepass ''
 
 一般的缓存处理的流程如下图：
 
-![img](https://img-blog.csdn.net/20180919143214712?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tvbmd0aWFvNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![img](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/70.png)
 
 ## 缓存穿透
 ==缓存穿透是指用户请求中，请求的数据并不存在于缓存或数据库中，系统返回空结果的现象。==

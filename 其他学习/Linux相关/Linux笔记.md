@@ -678,7 +678,7 @@ tcpdump的输出，每一行代表一个包，用字符串的形式将需要的�
 
 wireshark可以分层展示包信息。比如上面抓ping包的文件，解析后一个包的信息展示如下：
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Linux笔记.asset/image-20210720183227785.png" alt="image-20210720183227785" style="zoom:67%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/image-20210720183227785.png" alt="image-20210720183227785" style="zoom:67%;" />
 
 ## ifstat, vmstat, iostat, netstat
 
@@ -688,7 +688,7 @@ wireshark可以分层展示包信息。比如上面抓ping包的文件，解析�
 
 运行`ifstat`命令的结果大概长这样：
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Linux笔记.asset/image-20210803151854369.png" alt="image-20210803151854369" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/image-20210803151854369.png" alt="image-20210803151854369" style="zoom:50%;" />
 
 这个命令的原理是这样的，默认情况下，第一次执行一次ifstat之后，隔一段时间再执行一次ifstat。每次执行后，这次执行的结果会被写到`/tmp/.ifstat.$UID`文件里。
 
@@ -701,7 +701,7 @@ wireshark可以分层展示包信息。比如上面抓ping包的文件，解析�
 
 vmstat综合展示了很多维度的机器的状态。输出大概长这样：
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Linux笔记.asset/image-20210803154009956.png" alt="image-20210803154009956" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/image-20210803154009956.png" alt="image-20210803154009956" style="zoom:50%;" />
 
 命令的两个数字，第一个是采样间隔秒数，第二个是总共采样次数。
 输出结果总共有六大块。
@@ -717,7 +717,7 @@ vmstat综合展示了很多维度的机器的状态。输出大概长这样：
 
 iostat的输出长这样：（iostat也可以后接两个数字，逻辑和vmstat一样）
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Linux笔记.asset/image-20210803172340737.png" alt="image-20210803172340737" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/image-20210803172340737.png" alt="image-20210803172340737" style="zoom:50%;" />
 
 上面的CPU时间比部分输出就不说了，一个意思。
 

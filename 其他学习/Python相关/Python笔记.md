@@ -679,7 +679,7 @@ def __exit__(exc_type, exc_val, exc_tb):
 程序计数器，堆栈等等。
 
 进程和线程可维护的数据区别如下：
-<img src="https://pic.leetcode-cn.com/1612667575-cWbpmB-os8-7.png" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/1612667575-cWbpmB-os8-7.png" style="zoom:50%;" />
 
 需要注意的是，虽然不同线程持有的信息可以分化，但是这种分化的独立性并不是很强（至少比不同进程间的分化弱）。
 因此，一个线程理论上是可以读取、写入甚至删除另一个线程的所有信息。
@@ -862,15 +862,15 @@ End of Main...
 
 2. 遍历每个对象，==将其引用的所有对象的`gc_ref -= 1`。注意，是将其引用的所有对象，而不是其自己的`gc_ref`减去1==。上述两个过程可以描述为下面图的变化过程：
 
-   ![](https://pic1.zhimg.com/80/v2-0d5071093adaa02bc03fa3dfd91aa5bc_1440w.jpg)
+   ![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/v2-0d5071093adaa02bc03fa3dfd91aa5bc_1440w.jpg)
 
-   ![](https://pic2.zhimg.com/80/v2-d7314ead6b303f08a91687577c045585_1440w.jpg)
+   ![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/v2-d7314ead6b303f08a91687577c045585_1440w.jpg)
 
    3. 将所有`gc_ref`归零的对象移入unreachable区。
 
    4. ==从`gc_ref`尚未归零的对象出发进行图扫描。对于可以通过扫描到达的对象，即使其`gc_ref`归零并且被移入了unreachable区，还是将其移会object to scan区==。如图：
 
-      ![](https://pic3.zhimg.com/80/v2-6fd40c055a6633c654acaf05f472c1b2_1440w.jpg)
+      ![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/v2-6fd40c055a6633c654acaf05f472c1b2_1440w.jpg)
 
    5. 此时，所有对象就被正确分成了可达与不可达两类。将不可达的那些进行GC即可。`gc_ref`这个GC用各个对象的临时变量可以回收。
 
@@ -963,7 +963,7 @@ print(b)    # [3, 4, [1, 2, [...]]]
 
 上述架构可以用这个图表示：
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Python笔记.asset/image-20210823152839618.png" alt="image-20210823152839618" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/image-20210823152839618.png" alt="image-20210823152839618" style="zoom:50%;" />
 
 # Python执行流程
 
@@ -1019,7 +1019,7 @@ Python默认将字节码文件保存在`.pyc`文件中。这个相当于Java里�
 
 解释器和一些周边内容构建起的Python体系架构如图：
 
-<img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltYWdlczIwMTUuY25ibG9ncy5jb20vYmxvZy84Njk0MjYvMjAxNjAxLzg2OTQyNi0yMDE2MDExNTEzMTgxNDMwMy0yMDkzNzQ2MDY2LmpwZw?x-oss-process=image/format,png" alt="img" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/format,png-20220318150203870.png" alt="img" style="zoom:50%;" />
 
 下面来详细说说解释器工作的四大阶段。
 

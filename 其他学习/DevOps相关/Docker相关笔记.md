@@ -4,7 +4,7 @@
 
 容器和虚拟机都是用来做环境隔离的基本单位。通常我们都把容器看做一种轻型的虚拟机，因为容器和虚拟机的架构区别如下：
 
-![img](https://upload-images.jianshu.io/upload_images/12979420-a562cd670f2b8b02?imageMogr2/auto-orient/strip|imageView2/2/w/529/format/webp)
+![img](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/webp.jpg)
 
 不论是用什么隔离体系，最终我们的目的都是要让程序利用硬件进行计算。而利用硬件都要通过操作系统内核。
 这里，虚拟机的做法，是带起一个自己的操作系统，通过自身操作系统的内核去访问硬件。而硬件本身也不是直接暴露给虚拟机OS，而是通过虚拟机管理软件，即上图中的hypervisor进行了虚拟化。
@@ -27,7 +27,7 @@
 
 如图：
 
-![img](https://upload-images.jianshu.io/upload_images/12979420-a562cd670f2b8b02?imageMogr2/auto-orient/strip|imageView2/2/w/529/format/webp)
+![img](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/webp.jpg)
 
 由于架构上的不同，容器和虚拟机在运行使用上差别也很大：
 
@@ -66,7 +66,7 @@ Cgroup中一个重要的概念称为子系统。不同的子系统对不同种�
 每个子系统都对应到系统中某个目录文件下，通常是`/sys/fs/cgroup/`中的一些目录。可以通过`mount -t cgroup`命令进行查看。
 子系统列表如下：
 
-<img src="https://img2020.cnblogs.com/blog/1977753/202004/1977753-20200412224046852-870716976.png" alt="img" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/1977753-20200412224046852-870716976.png" alt="img" style="zoom:50%;" />
 
 #### docker容器与Cgroup的关联性
 
@@ -165,7 +165,7 @@ lrwxrwxrwx 1 root root 0  8月 15 17:09 uts -> 'uts:[4026533158]'
 
 而在Docker中借鉴了类似的思路。第一步先启动挂载一个只读的rootfs，这个文件系统内包含的是镜像的文件内容。之后，和Linux不同的是，容器中的rootfs一直保持只读状态，在此基础上容器内部新创建一个空的读写的文件系统。==只读部分的rootfs和可读写部分的文件系统，共同组成了联合文件系统，即UnionFS。==
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Docker相关笔记.asset/image-20210722110433707.png" alt="image-20210722110433707" style="zoom:50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/image-20210722110433707.png" alt="image-20210722110433707" style="zoom:50%;" />
 
 ### UnionFS中的层
 
@@ -181,7 +181,7 @@ Docker中的镜像（也就是上图中的rootfs部分）基于层的概念进�
 如上所述，每个层的目录名是一个一长串由16进制数组成的东西，这也是该层的一个代号，我叫他长名。与之相对的，为了展示起来好看一些，还有一个短名。比如上述的`lower`中都是用短名表示层。
 长名和短名的对应关系在`overlay2/l`目录下维护。同时层内的`link`也是指向了这里面相应的短名链接。
 
-![](https://pic4.zhimg.com/80/v2-f522452ff1c111dae6bc564e5b56f0b7_720w.jpg)
+![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/v2-f522452ff1c111dae6bc564e5b56f0b7_720w.jpg)
 
 ### 镜像层和容器层
 
@@ -247,19 +247,21 @@ docker容器总共有四种网络模式
 
 - bridge模式（默认）
   
+
 默认情况下，docker采用bridge模式进行容器网络配置。docker主进程启动时，虚拟一个叫做docker0的网卡，并以此建立一个docker子网。
   之后每个容器建立时，都从这个子网中分得一个IP。宿主机内的所有容器都处于该子网中。容器间通信时，docker0被视作交换机进行通信中继服务，容器向外网访问时，则将宿主机视作网关路由器进行访问。
 
-  <img src="https://upload-images.jianshu.io/upload_images/13618762-f1643a51d313a889.png?imageMogr2/auto-orient/strip|imageView2/2/w/1083/format/webp" alt="img" style="zoom:50%;" />
+  <img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/webp-20220318150047324.jpg" alt="img" style="zoom:50%;" />
 
 - host模式
   
+
 ==通过host模式建立的容器，其进程、文件系统等用Namespace等技术和宿主机隔离开，但是不进行网络的隔离==。由于容器本身就是一个进程而已，所以其可以和宿主机的任何进程一样使用宿主机的网卡。换言之，如果docker容器监听端口，那么是直接在宿主机IP上监听，外部访问这个端口也就访问了容器内部；反过来，容器内部也可以利用宿主机的IP访问外部网络。
-  
+
 ==host模式可以最大限度地提升网络传输效率，并且配置直接方便，但是安全性、隔离性方面不好。==
-  
-<img src="https://upload-images.jianshu.io/upload_images/13618762-a892da42b8ff9342.png?imageMogr2/auto-orient/strip|imageView2/2/w/698/format/webp" alt="img" style="zoom:50%;" />
-  
+
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/webp-20220318150055911.jpg" alt="img" style="zoom:50%;" />
+
 - container模式
   ==container模式下，容器建立时需要指定另一个已经配置好网络的容器。新容器与该容器共享网络Namespace。==通常被指定的这个容器是桥接模式的，即处于宿主机建立的docker0网络中。新容器可以通过该容器的IP与外界交互信息。而两个容器之间通信则可以通过local网卡进行。
 
@@ -267,14 +269,14 @@ docker容器总共有四种网络模式
 
   ==与桥接模式的子网不同，container模式的子网的网关是一个容器，而不是宿主机本身。==
 
-  <img src="https://upload-images.jianshu.io/upload_images/13618762-790a69a562a5b358.png?imageMogr2/auto-orient/strip|imageView2/2/w/695/format/webp" alt="img" style="zoom:50%;" />
+  <img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/webp-20220318150058341.jpg" alt="img" style="zoom:50%;" />
   
 - none模式
   none模式下建立起的新容器，只有一个lo网卡。即在网络上其不与宿主机或其他容器有关联。可以通过手动配置进行关联。
 
   none模式可以保证容器在网络方面的绝对安全和绝对隔离。
 
-  <img src="https://upload-images.jianshu.io/upload_images/13618762-3fd41778faebcef5.png?imageMogr2/auto-orient/strip|imageView2/2/w/723/format/webp" alt="img" style="zoom:50%;" />
+  <img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/webp-20220318150106117.jpg" alt="img" style="zoom:50%;" />
 
 
 
@@ -420,7 +422,7 @@ mount namespace相比于其他的，更特殊一些。因为它需要通过`chro
 
 绑定挂载的原理，其实就是修改了被挂载目录，其指针指向的inode：
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Docker相关笔记.asset/95c957b3c2813bb70eb784b8d1daedc6.png" alt="img" style="zoom: 50%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/95c957b3c2813bb70eb784b8d1daedc6.png" alt="img" style="zoom: 50%;" />
 
 而原来的那个`inode_2`也没有消失，只不过没有指针指向他了，这也是为什么说原内容是被隐藏了。
 

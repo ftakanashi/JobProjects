@@ -26,11 +26,11 @@ Django的缺点：
 
 如图所示：
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Django与Flask相关.asset/image-20210721203731807.png" alt="image-20210721203731807" style="zoom:67%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/image-20210721203731807.png" alt="image-20210721203731807" style="zoom:67%;" />
 
 上述流程是开发或者说调试时的逻辑，如果放到生产环境上，往往需要更多组件如nginx，uwsgi等。下面是一个生产环境的示意图：
 
-![image-20210721204152294](/Users/wyzypa/Pictures/TyporaImages/Django与Flask相关.asset/image-20210721204152294.png)
+![image-20210721204152294](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/image-20210721204152294.png)
 
 这个流程，简单来说，浏览器发起HTTP请求后先到nginx。nginx会对请求url做分析，如果请求的是静态文件，nginx直接返回；若不是，则将请求通过socket交给uWSGI。
 之后就和上面描述过的流程一样了。
@@ -396,7 +396,7 @@ application指那些通过Django、Flask等框架写成的Web应用本身。
 
 以上三者的关系，带上周边的一些概念，所有关系可以表示如下：
 
-<img src="/Users/wyzypa/Pictures/TyporaImages/Django与Flask相关笔记.asset/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTQ1NTAxNQ==,size_16,color_FFFFFF,t_70.png" alt="在这里插入图片描述" style="zoom: 67%;" />
+<img src="https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/2022/03/18/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTQ1NTAxNQ==,size_16,color_FFFFFF,t_70.png" alt="在这里插入图片描述" style="zoom: 67%;" />
 
 ==总结一下，就是uWSGI这个软件实现了wsgi协议的server部分，从而可以通过wsgi协议与Django App进行通信；同时也实现了uwsgi协议，可以与前端实现了uwsgi协议的服务器如Nginx进行通信。==
 

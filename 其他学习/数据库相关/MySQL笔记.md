@@ -40,7 +40,7 @@ MySQL在存储方面，使用的最小存储单位叫数据页。一个数据页
 这个主键目录也被称为主键索引。泛泛来说这也算是索引的一种，且是最基础的一种索引。
 
 上述结构如下图示：
-![](https://pic3.zhimg.com/80/v2-774817ca13718769d799aaccc35463f2_720w.jpg)
+![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/v2-774817ca13718769d799aaccc35463f2_720w.jpg)
 
 
 ## 索引页扩张以及B+树
@@ -53,7 +53,7 @@ MySQL在存储方面，使用的最小存储单位叫数据页。一个数据页
 但两种索引页不同的是，前者是主键目录的索引，后者是实际数据的索引。
 
 上述方案可以以下面图示：
-![](https://pic2.zhimg.com/80/v2-5f492391305b5a0971b28044b5f3fcc1_720w.jpg)
+![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/v2-5f492391305b5a0971b28044b5f3fcc1_720w.jpg)
 
 注意图中各个页都被标记成了索引页，但是索引页并不同。黑底的是索引页8是索引的索引（即二级索引），蓝底的索引页1和2是数据的索引。
 按上图例子，比如现在我想找主键=20的数据在哪时，先在最上层的索引页找，发现20的索引被记录在索引页2，然后跳到索引页2，继续查找，发现20的数据在数据页5，
@@ -62,7 +62,7 @@ MySQL在存储方面，使用的最小存储单位叫数据页。一个数据页
 接着，如果数据进一步增多，导致二级索引页也过长了怎么办？分裂出一个三级索引呗。
 以此类推，其实最终就会得到一个树形的结构。从根节点开始索引一级一级下降，到倒数第二层索引变成数据的索引，而叶子节点则是数据页。
 整体图示如下：
-![](https://pic1.zhimg.com/80/v2-e79c5057bed36c40ac34e265678eb38c_720w.jpg)
+![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/v2-e79c5057bed36c40ac34e265678eb38c_720w.jpg)
 
 实际上，上面这棵树，是一个B+树。
 
@@ -74,14 +74,14 @@ MySQL在存储方面，使用的最小存储单位叫数据页。一个数据页
 对于一个节点如果其内部排序是`p1 d1 p2 d2`的话，那么所有`p1`指针指向的子节点及其所有后代节点的数据块的数据全部小于等于`d1`。
 同理，`p2`指向的所有后代节点中的所有数据都大于等于`d1`但小于等于`d2`。
 上面这样的一个树，叫做B树：
-![](https://pic1.zhimg.com/80/v2-daf5fe2b640f9822a24b51210f8bed44_720w.jpg)
+![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/v2-daf5fe2b640f9822a24b51210f8bed44_720w.jpg)
 
 而把B树节点中的所有非叶子节点的数据块全部都去掉（或者说以合理的形式安排到其下属某个叶子节点中），得到的树就是B+树了。
 显然，B+树每个非叶子节点只有指针，而指针之间又是互相有序的。前序指针的后代叶子节点中最大的数据，小于等于后续指针后代叶子节点中最小的数据。
 
 具体到数据库的索引结构中，示意图大概长这样：
 
-![](https://pic3.zhimg.com/80/v2-e409f0e42fed2eb95b2c83c246b03d2e_720w.jpg)
+![](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/v2-e409f0e42fed2eb95b2c83c246b03d2e_720w.jpg)
 
 树上每个非叶子节点都是一个指针的有序集合。指针一层一层往下指，指导叶子节点位置。每个叶子节点都是一个数据页。此外正如上面说过的，这些数据页之间都用双向链表相连，即B+树的叶子节点之间还有序地前后相连着。
 
@@ -590,7 +590,7 @@ MySQL主从复制涉及主从服务器上共三个线程实体：==binlog线程�
 
 上述流程的著名图示如下：
 
-![在这里插入图片描述](https://uploadfiles.nowcoder.com/files/20210411/115285789_1618134217150/20210121201012972.jpg)
+![在这里插入图片描述](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/20210121201012972.jpg)
 
 主从复制的作用是
 
@@ -679,7 +679,8 @@ MySQL支持很多存储引擎。主要比较InnoDB和MyISAM。
 - 日期：DATE，DATETIME等
 
 ## MySQL收到请求后的处理流程
-![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9wNi10dC5ieXRlaW1nLmNvbS9vcmlnaW4vcGdjLWltYWdlLzA3NjZmYjE3YjNkZjQ0ZWZhZjIwMTYxNTJkZGNjNTIz?x-oss-process=image/format,png)
+
+![image-20220317221612754](https://localblog-1258020778.cos.ap-shanghai.myqcloud.com/uPic/image-20220317221612754.png)
 
 ## SQL语句基础知识与优化
 ### SQL语句主要分类
