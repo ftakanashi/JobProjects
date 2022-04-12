@@ -1,3 +1,5 @@
+#就活笔记 #Python
+
 # Python中的基本数字表达
 >参考：https://zhuanlan.zhihu.com/p/91967268?utm_source=wechat_session
 
