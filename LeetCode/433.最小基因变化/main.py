@@ -4,8 +4,8 @@ from collections import deque
 
 class Solution:
     def minMutation(self, start: str, end: str, bank: List[str]) -> int:
-        if len(bank) == 0: return -1    # bank无内容情况的优化
         bank = set(bank)
+        if len(bank) == 0 or end not in bank: return -1    # 一些特殊情况的优化
         queue = deque()
         queue.append((start, 0))
         chars = "ACGT"

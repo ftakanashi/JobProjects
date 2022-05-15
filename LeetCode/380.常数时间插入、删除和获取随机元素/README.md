@@ -56,3 +56,35 @@ pop并记录最后一个元素。然后将这个元素写到指定删除元素�
 这么做需要实时知道所有元素和下标的对应关系，当然这些关系在dict里有。
 
 剩下的就是一些细节处理，比如remove掉的刚好是最后一个元素，或者remove掉后集合为空等。
+
+#### 2022/04/13 一个更简化的代码版本
+```python
+import random
+class RandomizedSet:
+
+    def __init__(self):
+        self.list = []
+        self.hash = {}
+
+    def insert(self, val: int) -> bool:
+        if val in self.hash: return False
+        self.list.append(val)
+        self.hash[val] = len(self.list) - 1
+        return True
+
+    def remove(self, val: int) -> bool:
+        if val not in self.hash: return False
+        i = self.hash.pop(val)
+        tail = self.list.pop()
+        if i < len(self.list):
+            self.list[i] = tail
+            self.hash[tail] = i
+        return True
+
+    def getRandom(self) -> int:
+        return random.choice(self.list)
+```
+
+另，今天看到这道题后第一反应是和`LC.432`记混了，尝试用哈希表+双向链表来做了。
+思路倒也挺清晰，问题关键在于如何进行getRandom操作。
+链表随机取节点，以为妥妥的蓄水池取样，但是回头看了下蓄水池采样才发现那个采样算法是O(n)的，所以就G了。
