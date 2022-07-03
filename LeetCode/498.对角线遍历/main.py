@@ -52,3 +52,37 @@ class Solution2:
             res.extend(sub_res)
 
         return res
+
+
+class Solution2_1:
+    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
+        m, n = len(mat), len(mat[0])
+        i = j = 0
+        di, dj = -1, 1
+        ans = []
+        while len(ans) < m * n:
+            while 0 <= i < m and 0 <= j < n:
+                ans.append(mat[i][j])
+                i += di
+                j += dj
+            if 0 <= j < n:
+                if i < 0:
+                    i = 0
+                elif i >= m:
+                    i = m - 1
+                    j += 2
+            elif 0 <= i < m:
+                if j < 0:
+                    j = 0
+                elif j >= n:
+                    j = n - 1
+                    i += 2
+            elif i < 0 and j >= n:
+                i, j = 1, n - 1
+            elif i >= m and j < 0:
+                i, j = m - 1, 1
+
+            di *= -1
+            dj *= -1
+
+        return ans

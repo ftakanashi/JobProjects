@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+from typing import List
+
 from collections import Counter
 
 # Definition for a binary tree node.
