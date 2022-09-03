@@ -7,7 +7,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-class Solution:
+class Solution1:
     def addOneRow(self, root: TreeNode, val: int, depth: int) -> TreeNode:
         if depth == 1:
             new_root = TreeNode(val)
@@ -30,4 +30,32 @@ class Solution:
                 dfs(node.right, curr_depth + 1)
 
         dfs(root, 1)
+        return root
+
+from typing import Optional
+from collections import deque
+class Solution:
+    def addOneRow(self, root: Optional[TreeNode], val: int, depth: int) -> Optional[TreeNode]:
+        if depth == 1:
+            node = TreeNode(val, root, None)
+            return node
+        curr_depth = 1
+        q = deque([])
+        q.append(root)
+        while q:
+            for _ in range(len(q)):
+                node = q.popleft()
+                l, r = node.left, node.right
+                if curr_depth == depth - 1:
+                    new_left, new_right = TreeNode(val), TreeNode(val)
+                    node.left = new_left
+                    new_left.left = l
+                    node.right = new_right
+                    new_right.right = r
+                if l:
+                    q.append(l)
+                if r:
+                    q.append(r)
+            curr_depth += 1
+
         return root
