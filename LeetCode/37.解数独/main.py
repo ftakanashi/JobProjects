@@ -108,3 +108,6 @@ class Solution1_5:
             return True
 
         dfs()
+
+
+s = Solution()

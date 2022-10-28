@@ -25,3 +25,25 @@ class Solution:
         max_len = max(max_len, j - i)    # j完成整个遍历之后的最后一个窗口没有在循环中获取长度。需要在这里再收割一下。
 
         return max_len
+
+from collections import Counter
+class Solution0:
+    def totalFruit(self, fruits: List[int]) -> int:
+        i = j = 0
+        n = len(fruits)
+        bucket = Counter()
+        ans = 0
+        while j < n:
+            bucket[fruits[j]] += 1
+
+            while i < j and len(bucket) > 2:
+                f = fruits[i]
+                bucket[f] -= 1
+                i += 1
+                if bucket[f] == 0:
+                    bucket.pop(f)
+
+            ans = max(ans, j - i + 1)
+            j += 1
+
+        return ans
