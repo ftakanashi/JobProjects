@@ -8,3 +8,9 @@ class Solution:
                 for _ in range(3): stack.pop()
 
         return len(stack) == 0
+
+class Solution2:
+    def isValid(self, s: str) -> bool:
+        while len(s) > 0 and "abc" in s:
+            s = s.replace("abc", "")
+        return len(s) == 0

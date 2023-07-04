@@ -38,3 +38,32 @@ class Solution:
         dfs(root)
 
         return list(ans)
+
+
+from typing import Optional
+from collections import deque
+class Solution2:
+    def delNodes(self, root: Optional[TreeNode], to_delete: List[int]) -> List[TreeNode]:
+        queue = deque()
+        to_delete = set(to_delete)
+        ans = []
+        queue.append((root, root.val in to_delete, True))
+        while queue:
+            node, del_flag, is_root = queue.popleft()
+            l, r = node.left, node.right
+            if l is not None:
+                if l.val in to_delete:
+                    queue.append((node.left, True, False))
+                    node.left = None
+                else:
+                    queue.append((node.left, False, del_flag))
+            if r is not None:
+                if r.val in to_delete:
+                    queue.append((node.right, True, False))
+                    node.right = None
+                else:
+                    queue.append((node.right, False, del_flag))
+            if not del_flag and is_root:
+                ans.append(node)
+
+        return ans
