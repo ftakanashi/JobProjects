@@ -45,8 +45,8 @@
 由于整个树保证节点数和硬币数一致，所以当某个子树有`p`个硬币的盈亏时，为了让其达到要求，就一定会需要`abs(p)`次操作将`p`个硬币从子树根移动到子树中或者反之。
 
 因此，dfs函数设计成这样：
-`dfs(node)`返回`p`。显然对于根节点，直接返回`node.val - 1`即可。
-对于非根，则需要计算`dfs(node.left)`和`dfs(node.right)`。
+`dfs(node)`返回`p`。显然对于叶节点，直接返回`node.val - 1`即可。
+对于非叶子，则需要计算`dfs(node.left)`和`dfs(node.right)`。
 两个答案分别套上绝对值，加到`ans`上。
 同时别忘了计算`node`作为根节点的子树的`p`值，是`node.val - 1 + dfs(node.left) + dfs(node.right)`。
 
